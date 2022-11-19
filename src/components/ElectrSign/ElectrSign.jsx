@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonUi from '../../UI/button/ButtonUi';
 import './ElectrSign.scss';
 
 const ElectrSign = () => {
@@ -21,6 +22,58 @@ const ElectrSign = () => {
           referrerPolicy="no-referrer-when-downgrade"
           //   access-control-allow-origin="google.com"
         ></iframe>
+      </div>
+      <div className="electrSign__text">
+        <div className="description">
+          <div className="description__text">
+            <p>
+              С 1 января 2022 года первым лицам организаций и ИП нужно получать новые сертификаты
+              электронной подписи от удостоверяющего центра ФНС (УЦ ФНС). <br />
+              Посетите один из наших офисов, где находится доверенный партнер, подтвердите личность
+              и выпустите свой сертификат. Мы установим сертификат и настроим компьютер для работы с
+              электронной подписью.
+            </p>
+          </div>
+          <div className="description__buttons">
+            <ButtonUi className={'description__buttons_black'}>Для руководителей и ИП</ButtonUi>
+            <ButtonUi className={'description__buttons_white'}>Для физических лиц</ButtonUi>
+            <ButtonUi className={'description__buttons_black'}>
+              Зарегистрировать ООО или ИП
+            </ButtonUi>
+            <ButtonUi className={'description__buttons_white'}>Для Госуслуг</ButtonUi>
+            <ButtonUi className={'description__buttons_white'}>
+              Оформить недвижимость в собственность
+            </ButtonUi>
+          </div>
+          <div className="description__text">
+            <p>
+              Квалифицированная электронная подпись с базовым набором возможностей для решения
+              бизнес-задач. Она нужна, чтобы взаимодействовать с контролирующими органами и их
+              информационными системами:
+            </p>
+            <ul>
+              <li>сайт ФНС nalog.ru;</li>
+              <li> ФГИС ЕИАС (ФАС России);</li>
+              <li>Госуслуги;</li>
+              <li>Федресурс (ЕФРСДЮЛ и ЕФРСБ);</li>
+              <li>Электронный ПТС (ЭПТС).</li>
+            </ul>
+            <img
+              src={require('../../assets/img/systemBusiness/flDriveFon.png')}
+              alt="#"
+              className="description__img_drive"
+            />
+            <img
+              src={require('../../assets/img/systemBusiness/lineFon.png')}
+              alt="#"
+              className="description__img_line"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="electrSign__request">
+        <ButtonUi>Отправить заявку</ButtonUi>
+        <p>Оставьте заявку, и мы подберем подпись под ваши задачи</p>
       </div>
     </div>
   );
