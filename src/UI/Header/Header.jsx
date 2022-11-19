@@ -1,5 +1,5 @@
 import React from 'react';
-import Ecosystem from '../EcosystemBusiness/Ecosystem';
+import Ecosystem from '../../components/EcosystemBusiness/Ecosystem';
 import './Header.scss';
 
 const Header = () => {
