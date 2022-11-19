@@ -1,0 +1,106 @@
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+.ecosistem {
+  display: flex;
+  margin-top: 81px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__title {
+    width: 385px;
+    font-style: normal;
+    font-weight: $bolt;
+    font-size: 37px;
+    line-height: 66px;
+    color: $black;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+  }
+
+  &__services {
+    margin-top: 82px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      p {
+        font-weight: $medium;
+        font-size: 20px;
+        line-height: 48px;
+        color: $black;
+        border-bottom: 1px solid $black;
+        display: inline;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+    &_title {
+      color: $green;
+
+      p {
+        width: 50%;
+        font-weight: $medium;
+        font-size: 16px;
+      }
+
+      img {
+        margin: 0 27px 0 40px;
+      }
+    }
+  }
+
+  .table {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    .icons {
+      width: 150px;
+      margin-bottom: 16px;
+
+      p {
+        font-weight: $medium;
+        font-size: 20px;
+        line-height: 32px;
+      }
+      img {
+        margin-right: 17px;
+      }
+    }
+
+    &__table {
+      position: absolute;
+      z-index: -1;
+      top: -130px;
+      right: -70px;
+    }
+
+    &__eagle {
+      position: absolute;
+      z-index: -1;
+      top: -105px;
+      left: -63px;
+    }
+
+    &__laptop {
+      position: absolute;
+      z-index: -1;
+      top: -34px;
+      left: -225px;
+    }
+  }
+}
