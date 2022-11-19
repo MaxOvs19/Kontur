@@ -30,6 +30,10 @@
     display: flex;
     color: $black;
 
+    img {
+      z-index: 2;
+    }
+
     .text {
       &__title {
         display: flex;

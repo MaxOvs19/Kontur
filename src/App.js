@@ -1,5 +1,6 @@
 import './App.css';
 import BkKeeping from './components/Bookkeeping/BkKeeping';
+import Diadoc from './components/Diadoc/Diadoc';
 import ElectrSign from './components/ElectrSign/ElectrSign';
 import Extern from './components/Extern/Extern';
 import Header from './UI/Header/Header';
@@ -13,7 +14,9 @@ function App() {
         <Extern />
       </div>
       <BkKeeping />
-      <div className="container"></div>
+      <div className="container">
+        <Diadoc />
+      </div>
     </div>
   );
 }
