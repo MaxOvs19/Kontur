@@ -2,13 +2,13 @@
 @import '../../styles/fonts';
 
 .bkKeeping {
+  z-index: -1;
   height: 1100px;
   position: relative;
   max-width: 100%;
   background-color: $gray;
   padding-top: 200px;
   margin-top: -100px;
-  z-index: 1;
 
   &__title {
     display: flex;

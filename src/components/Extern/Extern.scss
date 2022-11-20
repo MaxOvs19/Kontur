@@ -35,6 +35,8 @@
     }
 
     .text {
+      z-index: 5;
+
       &__title {
         display: flex;
         align-items: center;

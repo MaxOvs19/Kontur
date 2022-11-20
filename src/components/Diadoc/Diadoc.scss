@@ -25,12 +25,125 @@
     }
   }
 
-  .text {
-    margin-top: 38px;
-    &__title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  &__content {
+    position: relative;
+    background: white;
+    border-radius: 25px;
+
+    .text {
+      margin-top: 38px;
+
+      &__title {
+        padding-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        line-height: 32px;
+        color: $aqua;
+
+        h2 {
+          margin-left: 26px;
+        }
+      }
+
+      &__body {
+        margin-top: 48px;
+        font-size: 16px;
+        line-height: 25px;
+        display: flex;
+        justify-content: space-evenly;
+
+        img {
+          margin-right: 15px;
+        }
+
+        .medal {
+          margin-right: 25px;
+          width: 370px;
+          display: flex;
+          align-items: center;
+        }
+
+        .time {
+          width: 308px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    &_img {
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    &_line {
+      position: absolute;
+      bottom: 103px;
+      right: 307px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    margin: 30px 0 0 0;
+    justify-content: center;
+  }
+
+  .requestBtn {
+    background-color: $aqua;
+    width: 259px;
+    height: 70px;
+    font-size: 22px;
+    line-height: 66px;
+    color: #ffffff;
+  }
+
+  &__logo {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+
+    .box {
+      &__img {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 60px 0 0;
+
+        img {
+          z-index: 100;
+          margin: -24px 0 25px 0;
+        }
+      }
+
+      &__text {
+        width: 57%;
+        color: $black;
+
+        h2 {
+          font-size: 32px;
+          line-height: 66px;
+          font-weight: $bolt;
+        }
+
+        p {
+          margin-top: 25px;
+          font-size: 20px;
+          font-weight: $light;
+          line-height: 25px;
+        }
+
+        ul {
+          margin: 50px 0 0 30px;
+          li {
+            font-weight: $light;
+            font-size: 16px;
+            line-height: 25px;
+            list-style: disc;
+          }
+        }
+      }
     }
   }
 }

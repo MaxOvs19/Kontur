@@ -1,9 +1,10 @@
-import './App.css';
 import BkKeeping from './components/Bookkeeping/BkKeeping';
 import Diadoc from './components/Diadoc/Diadoc';
 import ElectrSign from './components/ElectrSign/ElectrSign';
 import Extern from './components/Extern/Extern';
+import Footer from './UI/Footer/Footer';
 import Header from './UI/Header/Header';
+import './App.css';
 
 function App() {
   return (
@@ -13,9 +14,12 @@ function App() {
         <ElectrSign />
         <Extern />
       </div>
+
       <BkKeeping />
+
       <div className="container">
         <Diadoc />
+        <Footer />
       </div>
     </div>
   );
