@@ -4,6 +4,7 @@ import ElectrSign from './components/ElectrSign/ElectrSign';
 import Extern from './components/Extern/Extern';
 import Footer from './UI/Footer/Footer';
 import Header from './UI/Header/Header';
+import React from 'react';
 import './App.css';
 
 function App() {
