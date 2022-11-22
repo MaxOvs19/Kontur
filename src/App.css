@@ -12,6 +12,7 @@
 
 .App {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .container {

@@ -121,3 +121,86 @@
     }
   }
 }
+
+/*320px - 576px*/
+@media (max-width: 576px) {
+  .electrSign {
+    &__title {
+      margin-top: 30px;
+      text-align: center;
+
+      h1 {
+        font-size: 21px;
+        line-height: 26px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-top: 18px;
+        line-height: 20px;
+      }
+    }
+
+    &__text {
+      margin-top: 50px;
+
+      .description {
+        &__text {
+          text-align: justify;
+          font-size: 13px;
+          line-height: 25px;
+          margin: 0;
+        }
+
+        &__buttons {
+          width: 100%;
+          margin: 90px 0 50px 0;
+
+          &_black {
+            padding: 0 12px 0 12px;
+            height: 35px;
+            font-size: 12px;
+            line-height: 25px;
+            width: 100%;
+            margin: 10px 0 10px 0;
+          }
+
+          &_white {
+            padding: 0 12px 0 12px;
+            height: 35px;
+            font-size: 12px;
+            line-height: 25px;
+            width: 100%;
+            margin: 10px 0 10px 0;
+          }
+        }
+
+        &__img {
+          &_drive {
+            bottom: -177px;
+            width: 70%;
+            right: -120px;
+          }
+
+          &_line {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__request {
+      flex-direction: column-reverse;
+
+      button {
+        margin: 0;
+      }
+
+      p {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

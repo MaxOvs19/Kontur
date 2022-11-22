@@ -13,13 +13,13 @@ function App() {
       <div className="container">
         <Header />
         <ElectrSign />
-        {/* <Extern /> */}
+        <Extern />
       </div>
 
-      {/* <BkKeeping /> */}
+      <BkKeeping />
 
       <div className="container">
-        {/* <Diadoc /> */}
+        <Diadoc />
         {/* <Footer /> */}
       </div>
     </div>
