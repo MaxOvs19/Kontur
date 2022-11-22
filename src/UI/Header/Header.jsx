@@ -1,5 +1,6 @@
 import React from 'react';
 import Ecosystem from '../../components/EcosystemBusiness/Ecosystem';
+import MenuBurger from '../MenuBurger/MenuBurger';
 import './Header.scss';
 
 const Header = () => {
@@ -7,6 +8,7 @@ const Header = () => {
     <div>
       <div className="header">
         <div className="header__logo">
+          <MenuBurger />
           <img src={require('../../assets/img/header/konturLogo.png')} alt="#" />
           <h2>Официальный партнер в ДНР</h2>
         </div>

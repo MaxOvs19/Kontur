@@ -34,3 +34,26 @@
     }
   }
 }
+
+/*320px - 576px*/
+@media (max-width: 576px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .header {
+    margin-top: 32px;
+
+    &__nav {
+      display: none;
+    }
+
+    &__logo {
+      h2 {
+        font-size: 12px;
+        line-height: 10px;
+        width: 32%;
+      }
+    }
+  }
+}
