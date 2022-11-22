@@ -101,15 +101,36 @@
   }
 
   &__logo {
+    color: $black;
     margin-top: 55px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     .box {
       &__img {
         display: flex;
-        flex-direction: column;
-        margin: 0px 60px 0 0;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .text-logo {
+          width: 57%;
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            font-size: 32px;
+            line-height: 66px;
+            font-weight: $bolt;
+          }
+
+          p {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: $light;
+            line-height: 25px;
+          }
+        }
 
         img {
           z-index: 100;
@@ -118,24 +139,12 @@
       }
 
       &__text {
-        width: 57%;
-        color: $black;
-
-        h2 {
-          font-size: 32px;
-          line-height: 66px;
-          font-weight: $bolt;
-        }
-
-        p {
-          margin-top: 25px;
-          font-size: 20px;
-          font-weight: $light;
-          line-height: 25px;
-        }
+        display: flex;
+        justify-content: space-evenly;
 
         ul {
-          margin: 50px 0 0 30px;
+          margin-top: -36px;
+          padding: 0px 0 0 40px;
           li {
             font-weight: $light;
             font-size: 16px;
@@ -150,4 +159,116 @@
 
 /*320px - 576px*/
 @media (max-width: 576px) {
+  .diadoc {
+    margin-top: 100px;
+
+    &__title {
+      margin-top: 0;
+      h1 {
+        z-index: 3;
+        font-size: 21px;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      p {
+        z-index: 3;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__content {
+      background-color: transparent;
+      border-radius: none;
+      -webkit-border-radius: none;
+      -moz-border-radius: none;
+      -ms-border-radius: none;
+      -o-border-radius: none;
+
+      .text {
+        &__title {
+          font-size: 30px;
+          line-height: 32px;
+        }
+
+        &__body {
+          flex-direction: column;
+
+          .medal,
+          .time {
+            width: 266px;
+          }
+
+          .medal {
+            margin-bottom: 56px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            width: 200px;
+          }
+        }
+      }
+
+      &_img {
+        width: 640px;
+        margin-left: -37px;
+      }
+
+      &_line {
+        bottom: 101px;
+        right: -56px;
+        width: 362px;
+      }
+    }
+
+    &__logo {
+      .box {
+        &__img {
+          position: relative;
+          img {
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            left: -21px;
+            margin-top: 114px;
+          }
+
+          .text-logo {
+            align-items: flex-end;
+            width: 100%;
+
+            h2 {
+              font-size: 22px;
+              text-align: center;
+            }
+
+            p {
+              width: 54%;
+              font-size: 16px;
+              line-height: 25px;
+            }
+          }
+        }
+
+        &__text {
+          flex-direction: column-reverse;
+
+          ul {
+            padding: 0;
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 25px;
+          }
+
+          button {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
 }

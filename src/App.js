@@ -20,7 +20,7 @@ function App() {
 
       <div className="container">
         <Diadoc />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

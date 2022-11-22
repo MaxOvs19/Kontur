@@ -51,16 +51,17 @@ const Diadoc = () => {
       <div className="diadoc__logo">
         <div className="box__img">
           <img src={require('../../assets/img/diadoc/iconKontur.png')} alt="#" />
-          <ButtonUi className={'requestBtn'}>Отправить заявку</ButtonUi>
+          <div className="text-logo">
+            <h2>ЭДО для маркетплейсов</h2>
+            <p>
+              Обменивайтесь документами с Ozon, Wildberries, Яндекс.Маркетом, KazanExpress, Lamoda и
+              другими площадками через интернет.
+            </p>
+          </div>
         </div>
 
         <div className="box__text">
-          <h2>ЭДО для маркетплейсов</h2>
-          <p>
-            Обменивайтесь документами с Ozon, Wildberries, Яндекс.Маркетом, KazanExpress, Lamoda и
-            другими площадками через интернет.
-          </p>
-
+          <ButtonUi className={'requestBtn'}>Отправить заявку</ButtonUi>
           <ul>
             <li>Быстро разберетесь в интуитивно понятном интерфейсе сервиса</li>
             <li>Справитесь без дополнительных сотрудников</li>
