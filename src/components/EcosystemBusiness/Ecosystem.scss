@@ -110,7 +110,7 @@
 /*320px - 576px*/
 @media (max-width: 576px) {
   .container {
-    width: 266px;
+    width: 280px;
   }
 
   .ecosistem {
@@ -137,7 +137,7 @@
     }
 
     .table {
-      justify-content: space-around;
+      justify-content: flex-start;
 
       .icons {
         width: 120px;
@@ -162,9 +162,9 @@
       }
 
       &__laptop {
-        top: -146px;
-        width: 61px;
-        left: 214px;
+        top: -147px;
+        width: 62px;
+        left: 227px;
       }
     }
 
