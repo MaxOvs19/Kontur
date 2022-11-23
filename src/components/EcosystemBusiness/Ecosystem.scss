@@ -2,6 +2,7 @@
 @import '../../styles/fonts';
 
 .ecosistem {
+  color: $black;
   display: flex;
   margin-top: 81px;
   justify-content: space-between;
@@ -13,7 +14,6 @@
     font-weight: $bolt;
     font-size: 37px;
     line-height: 66px;
-    color: $black;
   }
 
   &__box {
@@ -33,7 +33,6 @@
         font-weight: $medium;
         font-size: 20px;
         line-height: 48px;
-        color: $black;
         border-bottom: 1px solid $black;
         display: inline;
         cursor: pointer;
@@ -47,23 +46,23 @@
     height: 50px;
 
     &_title {
+      margin-bottom: 15px;
       color: $green;
 
       p {
-        width: 50%;
+        width: 200px;
         font-weight: $medium;
         font-size: 16px;
       }
 
       img {
-        margin: 0 27px 0 40px;
+        margin: 0 19px 0 5px;
       }
     }
   }
 
   .table {
     position: relative;
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -84,8 +83,7 @@
     }
 
     &__table,
-    &__eagle,
-    &__laptop {
+    &__eagle {
       position: absolute;
       z-index: -1;
     }
@@ -99,18 +97,13 @@
       top: -105px;
       left: -63px;
     }
-
-    &__laptop {
-      top: -34px;
-      left: -225px;
-    }
   }
 }
 
 /*320px - 576px*/
 @media (max-width: 576px) {
   .container {
-    width: 280px;
+    width: 90%;
   }
 
   .ecosistem {
@@ -118,7 +111,7 @@
 
     &__title {
       font-size: 21px;
-      width: 80%;
+      width: 207px;
       line-height: 33px;
     }
 
@@ -128,15 +121,17 @@
       }
 
       &_title {
-        margin-top: 30px;
+        margin-top: 15px;
         line-height: 20px;
-        p {
-          width: 90%;
+
+        img {
+          margin: 0 18px 0 5px;
         }
       }
     }
 
     .table {
+      position: relative;
       justify-content: flex-start;
 
       .icons {
@@ -150,21 +145,16 @@
           margin-right: 10px;
         }
       }
+
       &__table {
         width: 345px;
         top: -183px;
-        right: -205px;
+        left: 130px;
       }
 
       &__eagle {
         top: -73px;
         left: -27px;
-      }
-
-      &__laptop {
-        top: -147px;
-        width: 62px;
-        left: 227px;
       }
     }
 

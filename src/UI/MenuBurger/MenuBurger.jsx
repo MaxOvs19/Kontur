@@ -3,7 +3,7 @@ import './MenuBurger.scss';
 
 const MenuBurger = () => {
   return (
-    <div class="menu-btn">
+    <div className="menu-btn">
       <span></span>
       <span></span>
       <span></span>

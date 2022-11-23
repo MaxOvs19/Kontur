@@ -9,26 +9,19 @@ const Ecosystem = () => {
       </div>
       <div className="ecosistem__box">
         <div className="icons icons_title">
-          <img src={require('../../assets/img/icons/greenTick.png')} alt="" />
+          <img src={require('../../assets/img/icons/greenTick.png')} alt="#" />
           <p>Донецкая Народная Республика</p>
         </div>
         <div className="table">
           <div className="icons">
-            <img src={require('../../assets/img/icons/extern.png')} alt="" />
+            <img src={require('../../assets/img/icons/extern.png')} alt="#" />
             <p>Экстерн</p>
           </div>
           <div className="icons">
-            <img src={require('../../assets/img/icons/diadoc.png')} alt="" />
+            <img src={require('../../assets/img/icons/diadoc.png')} alt="#" />
             <p>Диадок</p>
           </div>
-          <div className="icons">
-            <img src={require('../../assets/img/icons/medal.png')} alt="" />
-            <p>ЭЦП</p>
-          </div>
-          <div className="icons">
-            <img src={require('../../assets/img/icons/buhgalteria.png')} alt="" />
-            <p>Бухгалтерия</p>
-          </div>
+
           <img
             src={require('../../assets/img/header/tableLaptop.png')}
             alt="#"
@@ -39,11 +32,16 @@ const Ecosystem = () => {
             alt="#"
             className="table__eagle"
           />
-          <img
-            src={require('../../assets/img/header/imageLaptop.png')}
-            alt="#"
-            className="table__laptop"
-          />
+        </div>
+        <div className="table">
+          <div className="icons">
+            <img src={require('../../assets/img/icons/medal.png')} alt="#" />
+            <p>ЭЦП</p>
+          </div>
+          <div className="icons">
+            <img src={require('../../assets/img/icons/buhgalteria.png')} alt="#" />
+            <p>Бухгалтерия</p>
+          </div>
         </div>
       </div>
       <div className="ecosistem__services">
