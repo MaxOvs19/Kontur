@@ -135,13 +135,13 @@
 
     .table {
       position: relative;
-      justify-content: flex-start;
+      justify-content: space-evenly;
 
       .icons {
         width: 120px;
 
-        p {
-          font-size: 17px;
+        a {
+          font-size: 18px;
         }
 
         img {
