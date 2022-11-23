@@ -53,27 +53,34 @@
         }
       }
 
-      &__buttons {
+      &__services {
         font-size: 18px;
-        width: 40%;
+        width: 45%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
 
-        &_black,
-        &_white {
-          cursor: pointer;
+        .black,
+        .white {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           padding: 0 23px 0 23px;
           height: 46px;
+          border-radius: 55px;
+          -webkit-border-radius: 55px;
+          -moz-border-radius: 55px;
+          -ms-border-radius: 55px;
+          -o-border-radius: 55px;
         }
 
-        &_black {
+        .black {
           background-color: $black;
           color: white;
         }
 
-        &_white {
+        .white {
           color: $black;
           background-color: $gray;
         }
@@ -102,14 +109,8 @@
     align-items: center;
 
     button {
-      width: 259px;
-      height: 70px;
       background-color: $red;
       color: white;
-      font-weight: $bolt;
-      font-size: 22px;
-      line-height: 66px;
-      cursor: pointer;
       margin-right: 59px;
     }
 
@@ -152,20 +153,12 @@
           margin: 0;
         }
 
-        &__buttons {
+        &__services {
           width: 100%;
-          margin: 90px 0 50px 0;
+          margin: 70px 0 50px 0;
 
-          &_black {
-            padding: 0 12px 0 12px;
-            height: 35px;
-            font-size: 12px;
-            line-height: 25px;
-            width: 100%;
-            margin: 10px 0 10px 0;
-          }
-
-          &_white {
+          .black,
+          .white {
             padding: 0 12px 0 12px;
             height: 35px;
             font-size: 12px;
@@ -177,9 +170,10 @@
 
         &__img {
           &_drive {
-            bottom: -177px;
-            width: 70%;
-            right: -120px;
+            bottom: -144px;
+            width: 184px;
+            height: 234px;
+            right: -90px;
           }
 
           &_line {

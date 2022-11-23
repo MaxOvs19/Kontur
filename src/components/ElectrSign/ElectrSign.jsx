@@ -12,16 +12,6 @@ const ElectrSign = () => {
         </p>
       </div>
       <div className="electrSign__map">
-        {/* <iframe
-          title="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2668.8378214821846!2d37.80922374947294!3d48.01684305296687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e0903fc9e66b5b%3A0x6651508ebecae25e!2sMyru%20Ave%2C%2017%2C%20Donetsk%2C%20Donets&#39;ka%20oblast%2C%20Ukraine%2C%2083000!5e0!3m2!1sen!2s!4v1668853546625!5m2!1sen!2s"
-          width="1018"
-          height="431"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe> */}
-
         <iframe
           title="map"
           src="https://yandex.ru/map-widget/v1/-/CCUfuIfY0D"
@@ -40,16 +30,12 @@ const ElectrSign = () => {
               электронной подписью.
             </p>
           </div>
-          <div className="description__buttons">
-            <ButtonUi className={'description__buttons_black'}>Для руководителей и ИП</ButtonUi>
-            <ButtonUi className={'description__buttons_white'}>Для физических лиц</ButtonUi>
-            <ButtonUi className={'description__buttons_black'}>
-              Зарегистрировать ООО или ИП
-            </ButtonUi>
-            <ButtonUi className={'description__buttons_white'}>Для Госуслуг</ButtonUi>
-            <ButtonUi className={'description__buttons_white'}>
-              Оформить недвижимость в собственность
-            </ButtonUi>
+          <div className="description__services">
+            <div className="black">Для руководителей и ИП</div>
+            <div className="white">Для физических лиц</div>
+            <div className="black">Зарегистрировать ООО или ИП</div>
+            <div className="white">Для Госуслуг</div>
+            <div className="white">Оформить недвижимость в собственность</div>
           </div>
           <div className="description__text">
             <p>

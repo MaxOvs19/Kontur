@@ -4,7 +4,11 @@
 .buttonUi {
   border-radius: 55px;
   border: none;
-  font-size: 16px;
   z-index: 5;
   cursor: pointer;
+  font-size: 22px;
+  line-height: 66px;
+  font-weight: $bolt;
+  width: 259px;
+  height: 70px;
 }
