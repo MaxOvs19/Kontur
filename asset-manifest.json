@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Kontur/static/css/main.022548dd.css",
+    "main.css": "/Kontur/static/css/main.4af7cce7.css",
     "main.js": "/Kontur/static/js/main.826cb688.js",
     "static/media/bg-extern.png": "/Kontur/static/media/bg-extern.b0c6aadaf338ba69e84e.png",
     "static/media/diadocBg.png": "/Kontur/static/media/diadocBg.a3f009b2cf57bb5a00c4.png",
@@ -19,11 +19,11 @@
     "static/media/LabGrotesque-Bold.woff2": "/Kontur/static/media/LabGrotesque-Bold.d824fbf31f33d239e3e1.woff2",
     "static/media/lineFon.png": "/Kontur/static/media/lineFon.cbf760cf94e681e1b39a.png",
     "index.html": "/Kontur/index.html",
-    "main.022548dd.css.map": "/Kontur/static/css/main.022548dd.css.map",
+    "main.4af7cce7.css.map": "/Kontur/static/css/main.4af7cce7.css.map",
     "main.826cb688.js.map": "/Kontur/static/js/main.826cb688.js.map"
   },
   "entrypoints": [
-    "static/css/main.022548dd.css",
+    "static/css/main.4af7cce7.css",
     "static/js/main.826cb688.js"
   ]
 }
