@@ -4,7 +4,7 @@ import './Extern.scss';
 
 const Extern = () => {
   return (
-    <div className="extern">
+    <div className="extern" id="externLink">
       <div className="extern__title">
         <h1>Все для отчетности в Донецке || Подключи сейчас</h1>
         <p>
@@ -17,7 +17,6 @@ const Extern = () => {
         <div className="text">
           <div className="text__title">
             <img src={require('../../assets/img/icons/externBig.png')} alt="#" />
-
             <h2>Экстерн</h2>
           </div>
           <p>
@@ -27,7 +26,7 @@ const Extern = () => {
           </p>
           <ButtonUi className={'text__btn'}>Отправить заявку</ButtonUi>
         </div>
-        <img src={require('../../assets/img/extern/bg-extern.png')} alt="#" />
+        <img src={require('../../assets/img/extern/bg-extern.png')} alt="#" className="bg-extern" />
       </div>
     </div>
   );

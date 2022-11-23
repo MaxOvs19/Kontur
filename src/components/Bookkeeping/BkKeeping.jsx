@@ -4,7 +4,7 @@ import './BkKeeping.scss';
 
 const BkKeeping = () => {
   return (
-    <div className="bkKeeping">
+    <div className="bkKeeping" id="bkLink">
       <div className="bkKeeping__body">
         <img src={require('../../assets/img/bkKeeping/bgBk.png')} alt="#" />
         <div className="text">

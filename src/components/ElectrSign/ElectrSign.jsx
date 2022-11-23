@@ -4,7 +4,7 @@ import './ElectrSign.scss';
 
 const ElectrSign = () => {
   return (
-    <div>
+    <div id="epcLink">
       <div className="electrSign__title">
         <h1>Электронная подпись в Донецке || Получить ЭЦП</h1>
         <p>

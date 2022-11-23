@@ -15,11 +15,11 @@ const Ecosystem = () => {
         <div className="table">
           <div className="icons">
             <img src={require('../../assets/img/icons/extern.png')} alt="#" />
-            <p>Экстерн</p>
+            <a href="#externLink">Экстерн</a>
           </div>
           <div className="icons">
             <img src={require('../../assets/img/icons/diadoc.png')} alt="#" />
-            <p>Диадок</p>
+            <a href="#diadocLink">Диадок</a>
           </div>
 
           <img
@@ -36,11 +36,11 @@ const Ecosystem = () => {
         <div className="table">
           <div className="icons">
             <img src={require('../../assets/img/icons/medal.png')} alt="#" />
-            <p>ЭЦП</p>
+            <a href="#epcLink">ЭЦП</a>
           </div>
           <div className="icons">
             <img src={require('../../assets/img/icons/buhgalteria.png')} alt="#" />
-            <p>Бухгалтерия</p>
+            <a href="#bkLink">Бухгалтерия</a>
           </div>
         </div>
       </div>

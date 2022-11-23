@@ -93,10 +93,6 @@
 
   .requestBtn {
     background-color: $aqua;
-    width: 259px;
-    height: 70px;
-    font-size: 22px;
-    line-height: 66px;
     color: #ffffff;
   }
 
@@ -160,7 +156,7 @@
 /*320px - 576px*/
 @media (max-width: 576px) {
   .diadoc {
-    margin-top: 150px;
+    margin-top: 110px;
 
     &__title {
       margin-top: 0;
@@ -195,14 +191,16 @@
 
         &__body {
           flex-direction: column;
+          align-items: center;
 
           .medal,
           .time {
-            width: 266px;
+            justify-content: center;
+            width: 90%;
           }
 
           .medal {
-            margin-bottom: 56px;
+            margin: 0 0 56px 0;
           }
 
           p {
@@ -229,11 +227,12 @@
       .box {
         &__img {
           position: relative;
+
           img {
             width: 130px;
             height: 130px;
             position: absolute;
-            left: -21px;
+            left: -13px;
             margin-top: 114px;
           }
 
@@ -262,6 +261,10 @@
             margin-top: 30px;
             font-size: 16px;
             line-height: 25px;
+
+            li {
+              margin-left: 10px;
+            }
           }
 
           button {

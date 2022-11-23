@@ -3,6 +3,7 @@
 @import './assets/fonts/LabGrotesque-700/style.css';
 
 * {
+  scroll-behavior: smooth;
   font-family: 'Lab Grotesque';
   margin: 0;
   padding: 0;

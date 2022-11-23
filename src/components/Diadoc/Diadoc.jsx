@@ -4,7 +4,7 @@ import './Diadoc.scss';
 
 const Diadoc = () => {
   return (
-    <div className="diadoc">
+    <div className="diadoc" id="diadocLink">
       <div className="diadoc__title">
         <h1>Электронный документооборот || Теперь и в ДНР</h1>
         <p>

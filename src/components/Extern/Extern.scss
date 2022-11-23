@@ -53,10 +53,6 @@
       &__btn {
         background-color: $orange;
         margin-top: 42px;
-        width: 259px;
-        height: 70px;
-        font-size: 22px;
-        line-height: 66px;
         color: white;
         font-weight: $bolt;
       }
@@ -96,6 +92,10 @@
       flex-direction: column;
 
       .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         p {
           font-size: 14px;
           width: 100%;
@@ -106,7 +106,7 @@
         }
       }
 
-      img {
+      .bg-extern {
         width: 120%;
       }
     }

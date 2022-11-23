@@ -49,9 +49,10 @@
       margin-bottom: 15px;
       color: $green;
 
-      p {
+      a {
         width: 200px;
         font-weight: $medium;
+
         font-size: 16px;
       }
 
@@ -72,11 +73,13 @@
       width: 150px;
       margin-bottom: 16px;
 
-      p {
+      a {
+        color: $black;
         font-weight: $medium;
         font-size: 20px;
         line-height: 32px;
       }
+
       img {
         margin-right: 17px;
       }
