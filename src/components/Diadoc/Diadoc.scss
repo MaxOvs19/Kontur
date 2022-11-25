@@ -81,7 +81,6 @@
     &_line {
       position: absolute;
       bottom: 103px;
-      right: 307px;
     }
   }
 
@@ -153,10 +152,57 @@
   }
 }
 
+/*576px - 768px*/
+@media (max-width: 768px) {
+  .diadoc {
+    &__title {
+      text-align: center;
+      margin-top: -245px;
+
+      h1 {
+        line-height: 55зч;
+      }
+    }
+
+    &__content {
+      &_line {
+        bottom: 101px;
+      }
+    }
+
+    &__logo {
+      .box {
+        &__img {
+          img {
+            height: 227px;
+            width: 220px;
+            margin: 0;
+          }
+
+          h2 {
+            line-height: 50px;
+            text-align: center;
+          }
+        }
+
+        &__text {
+          margin-top: 52px;
+          align-items: center;
+          flex-direction: column-reverse;
+
+          button {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /*320px - 576px*/
 @media (max-width: 576px) {
   .diadoc {
-    margin-top: 110px;
+    margin-top: 130px;
 
     &__title {
       margin-top: 0;
@@ -184,6 +230,7 @@
       -o-border-radius: none;
 
       .text {
+        position: relative;
         &__title {
           font-size: 30px;
           line-height: 32px;
@@ -218,7 +265,6 @@
 
       &_line {
         bottom: 101px;
-        right: -56px;
         width: 362px;
       }
     }
@@ -232,8 +278,8 @@
             width: 130px;
             height: 130px;
             position: absolute;
-            left: -13px;
-            margin-top: 114px;
+            top: 117px;
+            right: 61%;
           }
 
           .text-logo {
@@ -254,11 +300,12 @@
         }
 
         &__text {
+          margin-top: 0;
           flex-direction: column-reverse;
 
           ul {
             padding: 0;
-            margin-top: 30px;
+            margin: 30px 0 0 16px;
             font-size: 16px;
             line-height: 25px;
 

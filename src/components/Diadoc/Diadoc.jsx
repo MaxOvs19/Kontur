@@ -38,13 +38,12 @@ const Diadoc = () => {
           className="diadoc__content_img"
         />
 
-        <img
-          src={require('../../assets/img/diadoc/lineKontur.png')}
-          alt="#"
-          className="diadoc__content_line"
-        />
-
         <div className="diadoc__button">
+          <img
+            src={require('../../assets/img/diadoc/lineKontur.png')}
+            alt="#"
+            className="diadoc__content_line"
+          />
           <ButtonUi className={'requestBtn'}>Отправить заявку</ButtonUi>
         </div>
       </div>
