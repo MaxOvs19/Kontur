@@ -198,3 +198,54 @@
     }
   }
 }
+
+/*576px - 768px*/
+@media (max-width: 768px) {
+  .electrSign {
+    &__title {
+      text-align: center;
+      p {
+        margin-top: 15px;
+        line-height: 20px;
+      }
+    }
+
+    &__text {
+      margin-top: 60px;
+
+      .description {
+        &__services {
+          width: 90%;
+          .black,
+          .white {
+            margin-bottom: 15px;
+          }
+        }
+        &__img {
+          &_drive {
+            width: 42%;
+            bottom: -152px;
+            right: 0;
+          }
+
+          &_line {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__request {
+      flex-direction: column-reverse;
+
+      p {
+        width: 50%;
+        text-align: center;
+      }
+
+      button {
+        margin: 15px 0 0 0;
+      }
+    }
+  }
+}

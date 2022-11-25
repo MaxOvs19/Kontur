@@ -177,3 +177,34 @@
     }
   }
 }
+
+/*576px - 768px*/
+@media (max-width: 768px) {
+  .ecosistem {
+    margin-top: 50px;
+
+    &__box {
+      .table {
+        &__table {
+          top: -237px;
+          width: 520px;
+          left: 240px;
+        }
+      }
+    }
+
+    &__services {
+      justify-content: space-around;
+      margin-top: 25px;
+      .text {
+        p {
+          font-size: 16px;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -16,11 +16,11 @@ function App() {
         <Extern />
       </div>
 
-      <BkKeeping />
+      {/* <BkKeeping /> */}
 
       <div className="container">
-        <Diadoc />
-        <Footer />
+        {/* <Diadoc /> */}
+        {/* <Footer /> */}
       </div>
     </div>
   );
