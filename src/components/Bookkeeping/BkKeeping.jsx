@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonUi from '../../UI/button/ButtonUi';
+import RequestForm from '../../UI/RequestForm/RequestForm';
 import './BkKeeping.scss';
 
 const BkKeeping = () => {
+  const [modal, setModal] = useState(false);
   return (
     <div className="bkKeeping" id="bkLink">
       <div className="bkKeeping__body">
@@ -16,7 +18,18 @@ const BkKeeping = () => {
             Сервис для ведения учета, расчета и уплаты налогов, работы с сотрудниками и отправки
             отчетности в контролирующие органы через интернет.
           </p>
-          <ButtonUi className={'text__btn'}>Отправить заявку</ButtonUi>
+
+          <RequestForm
+            visible={modal}
+            setVisible={setModal}
+            title={'подключение Контур.Бухгалтерия'}
+            titleMini={'Все для отчетности в Донецк'}
+            type={'bkKeeping'}
+          ></RequestForm>
+
+          <ButtonUi className={'text__btn'} onClick={() => setModal(true)}>
+            Отправить заявку
+          </ButtonUi>
         </div>
       </div>
     </div>

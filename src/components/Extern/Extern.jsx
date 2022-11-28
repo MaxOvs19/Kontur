@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonUi from '../../UI/button/ButtonUi';
+import RequestForm from '../../UI/RequestForm/RequestForm';
 import './Extern.scss';
 
 const Extern = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <div className="extern" id="externLink">
       <div className="extern__title">
@@ -24,7 +27,18 @@ const Extern = () => {
             среднему и крупному бизнесу, бухгалтерским фирмам, бухгалтерам-фрилансерам и
             самозанятым.
           </p>
-          <ButtonUi className={'text__btn'}>Отправить заявку</ButtonUi>
+
+          <RequestForm
+            visible={modal}
+            setVisible={setModal}
+            title={'подключение Контур.Экстерн'}
+            titleMini={'Все для отчетности в Донецк'}
+            type={'Extern'}
+          ></RequestForm>
+
+          <ButtonUi className={'text__btn'} onClick={() => setModal(true)}>
+            Отправить заявку
+          </ButtonUi>
         </div>
         <img src={require('../../assets/img/extern/bg-extern.png')} alt="#" className="bg-extern" />
       </div>

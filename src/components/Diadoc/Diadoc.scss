@@ -2,8 +2,9 @@
 @import '../../styles/fonts';
 
 .diadoc {
+  z-index: 5;
+
   &__title {
-    z-index: 5;
     color: $black;
     margin-top: -550px;
     display: flex;
@@ -13,9 +14,11 @@
     h1 {
       font-size: 32px;
       font-weight: $bolt;
+      z-index: 5;
     }
 
     p {
+      z-index: 5;
       margin-top: 42px;
       width: 70%;
       font-size: 16px;
@@ -26,6 +29,7 @@
   }
 
   &__content {
+    z-index: 5;
     position: relative;
     background: white;
     border-radius: 25px;
@@ -128,12 +132,13 @@
         }
 
         img {
-          z-index: 100;
+          z-index: 2;
           margin: -24px 0 25px 0;
         }
       }
 
       &__text {
+        z-index: 2;
         display: flex;
         justify-content: space-evenly;
 

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonUi from '../../UI/button/ButtonUi';
+import RequestForm from '../../UI/RequestForm/RequestForm';
 import './Diadoc.scss';
 
 const Diadoc = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <div className="diadoc" id="diadocLink">
       <div className="diadoc__title">
@@ -44,7 +47,17 @@ const Diadoc = () => {
             alt="#"
             className="diadoc__content_line"
           />
-          <ButtonUi className={'requestBtn'}>Отправить заявку</ButtonUi>
+          <RequestForm
+            visible={modal}
+            setVisible={setModal}
+            title={'подключение Контур.Диадок'}
+            titleMini={'Электронный документооборот в ДНР'}
+            type={'Diadoc'}
+          ></RequestForm>
+
+          <ButtonUi className={'requestBtn'} onClick={() => setModal(true)}>
+            Отправить заявку
+          </ButtonUi>
         </div>
       </div>
       <div className="diadoc__logo">

@@ -3,7 +3,7 @@
 
 .modal {
   position: fixed;
-  z-index: 99;
+  z-index: 9999;
   top: 0;
   bottom: 0;
   right: 0;
@@ -12,6 +12,7 @@
   background-color: rgba(0, 0, 0, 0.45);
 
   &__content {
+    z-index: 9999;
     max-width: 657px;
     width: 657px;
     display: flex;
@@ -19,7 +20,6 @@
     background: linear-gradient(180deg, #ffffff 0%, #dedede 100%);
     border-radius: 40px;
     padding: 25px;
-    z-index: 99;
 
     .title {
       position: relative;
@@ -115,6 +115,13 @@
         line-height: 66px;
       }
     }
+
+    .send {
+      &__img {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 }
 
@@ -124,10 +131,18 @@
   align-items: center;
 }
 
+.hide {
+  display: none !important;
+}
+
 .red {
   background-color: $red;
 }
 
-.hide {
-  display: none !important;
+.orange {
+  background-color: $orange;
+}
+
+.purple {
+  background-color: $purple;
 }
