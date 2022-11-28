@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonUi from '../../UI/button/ButtonUi';
 import './ElectrSign.scss';
+import RequestForm from '../../UI/RequestForm/RequestForm';
 
 const ElectrSign = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <div id="epcLink">
       <div className="electrSign__title">
@@ -11,6 +14,7 @@ const ElectrSign = () => {
           Удостоверяющий центр выдает сертификаты электронной подписи для организаций и частных лиц.
         </p>
       </div>
+
       <div className="electrSign__map">
         <iframe
           title="map"
@@ -19,6 +23,7 @@ const ElectrSign = () => {
           height="431"
         ></iframe>
       </div>
+
       <div className="electrSign__text">
         <div className="description">
           <div className="description__text">
@@ -63,10 +68,19 @@ const ElectrSign = () => {
           </div>
         </div>
       </div>
+
       <div className="electrSign__request">
-        <ButtonUi>Отправить заявку</ButtonUi>
+        <ButtonUi onClick={() => setModal(true)}>Отправить заявку</ButtonUi>
         <p>Оставьте заявку, и мы подберем подпись под ваши задачи</p>
       </div>
+
+      <RequestForm
+        visible={modal}
+        setVisible={setModal}
+        title={'электронную подпись'}
+        titleMini={'Получить ЭЦП в Донецке'}
+        type={'ElectrSign'}
+      ></RequestForm>
     </div>
   );
 };

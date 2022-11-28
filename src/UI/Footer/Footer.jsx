@@ -10,7 +10,7 @@ const Footer = () => {
           <h2>Официальный партнер в ДНР</h2>
         </div>
         <nav className="footer__nav">
-          <li>+ 7 949 111 11 11</li>
+          <li>071 501 53 53</li>
           <li>Где мы находимся</li>
         </nav>
       </div>
