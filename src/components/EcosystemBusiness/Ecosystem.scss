@@ -106,7 +106,7 @@
 /*576px - 768px*/
 @media (max-width: 768px) {
   .ecosistem {
-    margin-top: 50px;
+    margin-top: 105px;
 
     &__box {
       .table {
@@ -141,7 +141,7 @@
   }
 
   .ecosistem {
-    margin-top: 30px;
+    margin-top: 105px;
 
     &__title {
       font-size: 21px;
@@ -155,7 +155,7 @@
       }
 
       &_title {
-        margin-left: 21px;
+        margin-left: 5px;
         margin-top: 15px;
         line-height: 20px;
       }
@@ -167,6 +167,7 @@
 
       .icons {
         width: 120px;
+        margin-right: 15px;
 
         a {
           font-size: 18px;
@@ -203,6 +204,10 @@
           line-height: 26px;
         }
       }
+    }
+
+    &__box {
+      align-items: flex-start;
     }
   }
 }

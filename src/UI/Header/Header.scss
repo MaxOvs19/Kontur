@@ -4,17 +4,19 @@
 .header {
   z-index: 9999;
   height: 100px;
-  width: 1108px;
+  width: 100%;
   background-color: white;
   position: fixed;
   top: 0;
+  left: 0;
   display: flex;
   align-items: center;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    width: 1108px;
+  }
 
   &__logo {
     display: flex;
@@ -52,8 +54,6 @@
   }
 
   .header {
-    margin-top: 32px;
-
     &__nav {
       display: none;
     }
@@ -75,7 +75,8 @@
   }
 
   .header {
-    margin-top: 30px;
+    padding: 0px 2.5% 0px 2.5%;
+    width: 95%;
 
     &__logo {
       h2 {

@@ -24,7 +24,7 @@ const ElectrSign = () => {
         ></iframe>
         <div className="electrSign__map_adress">
           <h2>Официальный партнер в Донецкой Народной Республике</h2>
-          <p>
+          <p className="name">
             ИП Бондаренко <br /> Станислав Геннадиевич
           </p>
 

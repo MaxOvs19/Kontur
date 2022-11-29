@@ -22,7 +22,23 @@ const Footer = () => {
         </div>
         <nav className="footer__nav">
           <li>071 501 53 53</li>
-          <li>Где мы находимся</li>
+          <li>
+            <a href="#facebook">
+              <img src={require('../../assets/img/footer/facebook.png')} alt="#" />
+            </a>
+
+            <a href="#vk">
+              <img src={require('../../assets/img/footer/vk.png')} alt="#" />
+            </a>
+
+            <a href="#inst">
+              <img src={require('../../assets/img/footer/instagram.png')} alt="#" />
+            </a>
+
+            <a href="#telega">
+              <img src={require('../../assets/img/footer/telegram.png')} alt="#" />
+            </a>
+          </li>
         </nav>
       </div>
     </div>
