@@ -29,7 +29,6 @@
   }
 
   &__content {
-    z-index: 5;
     position: relative;
     background: white;
     border-radius: 25px;
@@ -89,12 +88,14 @@
   }
 
   &__button {
+    z-index: 0;
     display: flex;
     margin: 30px 0 0 0;
     justify-content: center;
   }
 
   .requestBtn {
+    z-index: 0;
     background-color: $aqua;
     color: #ffffff;
   }
@@ -132,13 +133,12 @@
         }
 
         img {
-          z-index: 2;
           margin: -24px 0 25px 0;
         }
       }
 
       &__text {
-        z-index: 2;
+        z-index: 0;
         display: flex;
         justify-content: space-evenly;
 

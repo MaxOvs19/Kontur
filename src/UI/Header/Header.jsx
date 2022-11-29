@@ -13,7 +13,7 @@ const Header = () => {
           <h2>Официальный партнер в ДНР</h2>
         </div>
         <nav className="header__nav">
-          <li>Техподдержка</li>
+          <li>071 501 53 53</li>
           <li>Где мы находимся</li>
         </nav>
       </div>

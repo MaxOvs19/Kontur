@@ -4,6 +4,7 @@ import RequestForm from '../../UI/RequestForm/RequestForm';
 import './Diadoc.scss';
 
 const Diadoc = () => {
+  const [modalDiadoc, setModalDiadoc] = useState(false);
   const [modal, setModal] = useState(false);
 
   return (
@@ -48,14 +49,14 @@ const Diadoc = () => {
             className="diadoc__content_line"
           />
           <RequestForm
-            visible={modal}
-            setVisible={setModal}
+            visible={modalDiadoc}
+            setVisible={setModalDiadoc}
             title={'подключение Контур.Диадок'}
             titleMini={'Электронный документооборот в ДНР'}
             type={'Diadoc'}
           ></RequestForm>
 
-          <ButtonUi className={'requestBtn'} onClick={() => setModal(true)}>
+          <ButtonUi className={'requestBtn'} onClick={() => setModalDiadoc(true)}>
             Отправить заявку
           </ButtonUi>
         </div>
@@ -73,7 +74,17 @@ const Diadoc = () => {
         </div>
 
         <div className="box__text">
-          <ButtonUi className={'requestBtn'}>Отправить заявку</ButtonUi>
+          <RequestForm
+            visible={modal}
+            setVisible={setModal}
+            title={'подключение ЭДО для маркетплейсов'}
+            titleMini={'Электронный документооборот в ДНР'}
+            type={'Diadoc'}
+          ></RequestForm>
+
+          <ButtonUi className={'requestBtn'} onClick={() => setModal(true)}>
+            Отправить заявку
+          </ButtonUi>
           <ul>
             <li>Быстро разберетесь в интуитивно понятном интерфейсе сервиса</li>
             <li>Справитесь без дополнительных сотрудников</li>

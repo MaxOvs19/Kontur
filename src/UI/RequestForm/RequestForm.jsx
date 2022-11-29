@@ -14,6 +14,8 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
     colorBtn.push('orange');
   } else if (type === 'bkKeeping') {
     colorBtn.push('purple');
+  } else if (type === 'Diadoc') {
+    colorBtn.push('aqua');
   }
 
   if (visible) {
