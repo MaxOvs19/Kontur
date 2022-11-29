@@ -29,6 +29,29 @@
     iframe {
       border: 1px $gray solid;
     }
+
+    &_adress {
+      border: 1px solid #ecf8fd;
+      width: 314px;
+      padding: 0 5px 0 29px;
+      line-height: 25px;
+
+      h2 {
+        margin: 27px 0 35px 0;
+        width: 85%;
+        font-size: 16px;
+        color: $red;
+      }
+
+      h4 {
+        margin-top: 35px;
+      }
+
+      li {
+        margin-left: 26px;
+        list-style: disc;
+      }
+    }
   }
 
   &__text {

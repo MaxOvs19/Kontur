@@ -19,9 +19,25 @@ const ElectrSign = () => {
         <iframe
           title="map"
           src="https://yandex.ru/map-widget/v1/-/CCUfuIfY0D"
-          width="1018"
+          width="670px"
           height="431"
         ></iframe>
+        <div className="electrSign__map_adress">
+          <h2>Официальный партнер в Донецкой Народной Республике</h2>
+          <p>
+            ИП Бондаренко <br /> Станислав Геннадиевич
+          </p>
+
+          <h4>Адрес:</h4>
+          <p>Донецкая республика, г. Донецк, ул. Мира Проспект, 17, 9 этаж, 95 офис </p>
+
+          <h4>Контакты</h4>
+          <ul>
+            <li>071 501 53 53 </li>
+            <li>+7 949 501 53 53</li>
+            <li>dnr@myparus.ru</li>
+          </ul>
+        </div>
       </div>
 
       <div className="electrSign__text">
