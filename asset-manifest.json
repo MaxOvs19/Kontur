@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kontur/static/css/main.7a2c3022.css",
-    "main.js": "/Kontur/static/js/main.5268f643.js",
+    "main.css": "/Kontur/static/css/main.2cef9bc3.css",
+    "main.js": "/Kontur/static/js/main.8a40cb87.js",
     "static/media/bg-extern.png": "/Kontur/static/media/bg-extern.b0c6aadaf338ba69e84e.png",
     "static/media/diadocBg.png": "/Kontur/static/media/diadocBg.a3f009b2cf57bb5a00c4.png",
     "static/media/LabGrotesque-Medium.ttf": "/Kontur/static/media/LabGrotesque-Medium.dbfc938f23515b9be174.ttf",
@@ -17,13 +17,14 @@
     "static/media/LabGrotesque-Regular.woff2": "/Kontur/static/media/LabGrotesque-Regular.f45d8fdb56a00269067a.woff2",
     "static/media/LabGrotesque-Medium.woff2": "/Kontur/static/media/LabGrotesque-Medium.03578f957623052bf1dd.woff2",
     "static/media/LabGrotesque-Bold.woff2": "/Kontur/static/media/LabGrotesque-Bold.d824fbf31f33d239e3e1.woff2",
+    "static/media/sendIcon.png": "/Kontur/static/media/sendIcon.a0a1904dde32cd9d96ea.png",
     "static/media/lineFon.png": "/Kontur/static/media/lineFon.cbf760cf94e681e1b39a.png",
     "index.html": "/Kontur/index.html",
-    "main.7a2c3022.css.map": "/Kontur/static/css/main.7a2c3022.css.map",
-    "main.5268f643.js.map": "/Kontur/static/js/main.5268f643.js.map"
+    "main.2cef9bc3.css.map": "/Kontur/static/css/main.2cef9bc3.css.map",
+    "main.8a40cb87.js.map": "/Kontur/static/js/main.8a40cb87.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a2c3022.css",
-    "static/js/main.5268f643.js"
+    "static/css/main.2cef9bc3.css",
+    "static/js/main.8a40cb87.js"
   ]
 }
