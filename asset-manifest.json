@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Kontur/static/css/main.2cef9bc3.css",
-    "main.js": "/Kontur/static/js/main.8a40cb87.js",
+    "main.css": "/Kontur/static/css/main.3515d155.css",
+    "main.js": "/Kontur/static/js/main.b1c06c85.js",
     "static/media/bg-extern.png": "/Kontur/static/media/bg-extern.b0c6aadaf338ba69e84e.png",
     "static/media/diadocBg.png": "/Kontur/static/media/diadocBg.a3f009b2cf57bb5a00c4.png",
     "static/media/LabGrotesque-Medium.ttf": "/Kontur/static/media/LabGrotesque-Medium.dbfc938f23515b9be174.ttf",
@@ -20,11 +20,11 @@
     "static/media/sendIcon.png": "/Kontur/static/media/sendIcon.a0a1904dde32cd9d96ea.png",
     "static/media/lineFon.png": "/Kontur/static/media/lineFon.cbf760cf94e681e1b39a.png",
     "index.html": "/Kontur/index.html",
-    "main.2cef9bc3.css.map": "/Kontur/static/css/main.2cef9bc3.css.map",
-    "main.8a40cb87.js.map": "/Kontur/static/js/main.8a40cb87.js.map"
+    "main.3515d155.css.map": "/Kontur/static/css/main.3515d155.css.map",
+    "main.b1c06c85.js.map": "/Kontur/static/js/main.b1c06c85.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cef9bc3.css",
-    "static/js/main.8a40cb87.js"
+    "static/css/main.3515d155.css",
+    "static/js/main.b1c06c85.js"
   ]
 }
