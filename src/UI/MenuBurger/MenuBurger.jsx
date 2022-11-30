@@ -1,9 +1,9 @@
 import React from 'react';
 import './MenuBurger.scss';
 
-const MenuBurger = () => {
+const MenuBurger = (props) => {
   return (
-    <div className="menu-btn">
+    <div className="menu-btn" {...props}>
       <span></span>
       <span></span>
       <span></span>

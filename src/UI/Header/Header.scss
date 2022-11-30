@@ -2,7 +2,7 @@
 @import '../../styles/fonts';
 
 .header {
-  z-index: 9999;
+  z-index: 54;
   height: 100px;
   width: 100%;
   background-color: white;
@@ -38,7 +38,8 @@
     flex-grow: 1;
     justify-content: space-evenly;
 
-    li {
+    li,
+    a {
       font-size: 20px;
       font-weight: $medium;
       color: $black;
@@ -47,25 +48,71 @@
   }
 }
 
-/*320px - 576px*/
-@media (max-width: 576px) {
-  .menu-btn {
-    display: block;
-  }
+.menuMobail {
+  background: linear-gradient(180deg, #ffffff 0%, #ebebeb 100%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  top: 0;
+  left: -100%;
+  z-index: 55;
+  width: 100%;
+  height: 340px;
+  padding: 41px 0 0 0;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  &__content {
+    padding: 0 40px 0 40px;
+    color: $black;
 
-  .header {
-    &__nav {
-      display: none;
+    p {
+      font-size: 13px;
+      line-height: 16px;
+      margin: 35px 0 20px 0;
     }
 
-    &__logo {
-      h2 {
-        font-size: 12px;
-        line-height: 10px;
-        width: 32%;
-      }
+    a {
+      margin-right: 14px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: $medium;
+      margin-bottom: 24px;
+    }
+
+    h4 {
+      margin-bottom: 43px;
+      line-height: 32px;
+      font-size: 20px;
+    }
+
+    .back {
+      position: absolute;
+      top: 70px;
+      left: 85%;
+    }
+
+    button {
+      background-color: $red;
+      color: white;
+      font-size: 16px;
+      width: 196px;
+      height: 53px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
+}
+
+.active {
+  left: 0;
 }
 
 /*576px - 768px*/
@@ -92,6 +139,27 @@
 
       li {
         font-size: 16px;
+      }
+    }
+  }
+}
+
+/*320px - 576px*/
+@media (max-width: 576px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .header {
+    &__nav {
+      display: none;
+    }
+
+    &__logo {
+      h2 {
+        font-size: 12px;
+        line-height: 10px;
+        width: 32%;
       }
     }
   }

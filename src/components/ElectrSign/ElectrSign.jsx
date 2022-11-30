@@ -17,6 +17,7 @@ const ElectrSign = () => {
 
       <div className="electrSign__map">
         <iframe
+          id="map"
           title="map"
           src="https://yandex.ru/map-widget/v1/-/CCUfuIfY0D"
           width="670px"
