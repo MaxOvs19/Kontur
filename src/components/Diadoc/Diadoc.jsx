@@ -74,14 +74,6 @@ const Diadoc = () => {
         </div>
 
         <div className="box__text">
-          <RequestForm
-            visible={modal}
-            setVisible={setModal}
-            title={'подключение ЭДО для маркетплейсов'}
-            titleMini={'Электронный документооборот в ДНР'}
-            type={'Diadoc'}
-          ></RequestForm>
-
           <ButtonUi className={'requestBtn'} onClick={() => setModal(true)}>
             Отправить заявку
           </ButtonUi>
@@ -93,6 +85,13 @@ const Diadoc = () => {
           </ul>
         </div>
       </div>
+      <RequestForm
+        visible={modal}
+        setVisible={setModal}
+        title={'подключение ЭДО для маркетплейсов'}
+        titleMini={'Электронный документооборот в ДНР'}
+        type={'Diadoc'}
+      ></RequestForm>
     </div>
   );
 };

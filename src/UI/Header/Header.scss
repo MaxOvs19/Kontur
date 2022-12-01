@@ -146,6 +146,10 @@
 
 /*320px - 576px*/
 @media (max-width: 576px) {
+  .container {
+    position: relative;
+  }
+
   .menu-btn {
     display: block;
   }

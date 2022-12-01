@@ -28,20 +28,19 @@ const Extern = () => {
             самозанятым.
           </p>
 
-          <RequestForm
-            visible={modal}
-            setVisible={setModal}
-            title={'подключение Контур.Экстерн'}
-            titleMini={'Все для отчетности в Донецк'}
-            type={'Extern'}
-          ></RequestForm>
-
           <ButtonUi className={'text__btn'} onClick={() => setModal(true)}>
             Отправить заявку
           </ButtonUi>
         </div>
         <img src={require('../../assets/img/extern/bg-extern.png')} alt="#" className="bg-extern" />
       </div>
+      <RequestForm
+        visible={modal}
+        setVisible={setModal}
+        title={'подключение Контур.Экстерн'}
+        titleMini={'Все для отчетности в Донецк'}
+        type={'Extern'}
+      ></RequestForm>
     </div>
   );
 };
