@@ -8,6 +8,8 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
 
   const [sendForm, setSendForm] = useState(false);
 
+  const [data, setData] = useState({ fio: '', email: '', number: '' });
+
   if (type === 'ElectrSign') {
     colorBtn.push('red');
   } else if (type === 'Extern') {
@@ -23,9 +25,23 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
     rootClasses.push('active');
   }
 
-  const Send = (e) => {
+  const Send = async (e) => {
     e.preventDefault();
+    setData({
+      fio: data.fio,
+      email: data.email,
+      number: data.number,
+    });
+
+    if (data.fio === '' && data.email === '' && data.number === '') {
+      return;
+    }
     setSendForm(true);
+
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
   };
 
   const Close = () => {
@@ -89,11 +105,25 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
             <form action="lol.php" name="aa">
               <div className="body__inputs">
                 <div className="inputBox">
-                  <input type="text" placeholder="Ваше имя и фамилия" name="Fio" required />
+                  <input
+                    type="text"
+                    placeholder="Ваше имя и фамилия"
+                    name="Fio"
+                    required
+                    value={data.fio}
+                    onChange={(e) => setData({ ...data, fio: e.target.value })}
+                  />
                 </div>
 
                 <div className="inputBox">
-                  <input type="email" placeholder="E-mail" name="Email" required />
+                  <input
+                    type="email"
+                    placeholder="E-mail"
+                    name="Email"
+                    required
+                    value={data.email}
+                    onChange={(e) => setData({ ...data, email: e.target.value })}
+                  />
                 </div>
 
                 <div className="inputBox">
@@ -103,6 +133,8 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
                     name="Phone"
                     required
                     maxLength={11}
+                    value={data.number}
+                    onChange={(e) => setData({ ...data, number: e.target.value })}
                   />
                 </div>
 
