@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ButtonUi from '../button/ButtonUi';
-
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
 import './RequestForm.scss';
 
 const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
@@ -8,6 +9,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const colorBtn = ['body__submit'];
 
   const [sendForm, setSendForm] = useState(false);
+  const [validForm, setValidForm] = useState(false);
   const [data, setData] = useState({ fio: '', email: '', number: '' });
 
   const [email, setEmail] = useState('');
@@ -21,6 +23,14 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const [emailError, setEmailError] = useState('Неверно введен E-mail!');
   const [fioError, setFioError] = useState('Неверно введены ФИО!');
   const [numberError, setNumberError] = useState('Неверно введен номер!');
+
+  useEffect(() => {
+    if (emailError || fioError || numberError) {
+      setValidForm(false);
+    } else {
+      setValidForm(true);
+    }
+  }, [emailError, fioError, numberError]);
 
   switch (type) {
     case 'ElectrSign':
@@ -46,16 +56,18 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
 
   const Send = async (e) => {
     e.preventDefault();
+
     setData({
       fio: data.fio,
       email: data.email,
       number: data.number,
     });
 
-    if (data.fio === '' && data.email === '' && data.number === '') {
+    if (data.email === '' && data.fio === '' && data.number === '') {
       return;
+    } else {
+      setSendForm(true);
     }
-    setSendForm(true);
 
     const response = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
       method: 'POST',
@@ -79,14 +91,14 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
     }
   };
 
-  const numberHendler = (e) => {
-    setNumber(e.target.value);
-    const re = /^[0-9]+$/;
-    if (!re.test(String(e.target.value))) {
+  const numberHendler = (number) => {
+    setNumber(number);
+    const re = /^[+]*[0-9]+$/;
+    if (!re.test(String(number))) {
       setNumberError('Номер введен некорректно!');
     } else {
       setNumberError('');
-      setData({ ...data, number: e.target.value });
+      setData({ ...data, number: number });
     }
   };
 
@@ -202,20 +214,20 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
                 </div>
 
                 <div className="inputBox">
-                  <input
+                  <PhoneInput
                     type="tel"
-                    placeholder="+7 949 000 0000"
                     name="number"
-                    required
-                    maxLength={11}
+                    maxLength={16}
+                    minLength={16}
+                    placeholder="+7 949 000 0000"
                     value={number}
                     onBlur={(e) => blurHendler(e)}
                     onChange={(e) => numberHendler(e)}
-                  />
+                  ></PhoneInput>
                   {numberDirty && numberError && <div className="error">{numberError}</div>}
                 </div>
 
-                <ButtonUi className={colorBtn.join(' ')} onClick={Send}>
+                <ButtonUi className={colorBtn.join(' ')} onClick={Send} disabled={!validForm}>
                   Отправить заявку
                 </ButtonUi>
               </div>

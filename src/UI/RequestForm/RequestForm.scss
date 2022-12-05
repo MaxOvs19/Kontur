@@ -166,6 +166,12 @@
   background-color: $aqua;
 }
 
+.PhoneInputCountryIcon {
+  svg {
+    display: none;
+  }
+}
+
 /*320px - 576px*/
 @media (max-width: 576px) {
 }
