@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ButtonUi from '../button/ButtonUi';
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
 import './RequestForm.scss';
 
 const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
@@ -7,17 +9,44 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const colorBtn = ['body__submit'];
 
   const [sendForm, setSendForm] = useState(false);
-
+  const [validForm, setValidForm] = useState(false);
   const [data, setData] = useState({ fio: '', email: '', number: '' });
 
-  if (type === 'ElectrSign') {
-    colorBtn.push('red');
-  } else if (type === 'Extern') {
-    colorBtn.push('orange');
-  } else if (type === 'bkKeeping') {
-    colorBtn.push('purple');
-  } else if (type === 'Diadoc') {
-    colorBtn.push('aqua');
+  const [email, setEmail] = useState('');
+  const [fio, setFio] = useState('');
+  const [number, setNumber] = useState('');
+
+  const [emailDirty, setEmailDirty] = useState(false);
+  const [fioDirty, setFioDirty] = useState(false);
+  const [numberDirty, setNumberDirty] = useState(false);
+
+  const [emailError, setEmailError] = useState('Неверно введен E-mail!');
+  const [fioError, setFioError] = useState('Неверно введены ФИО!');
+  const [numberError, setNumberError] = useState('Неверно введен номер!');
+
+  useEffect(() => {
+    if (emailError || fioError || numberError) {
+      setValidForm(false);
+    } else {
+      setValidForm(true);
+    }
+  }, [emailError, fioError, numberError]);
+
+  switch (type) {
+    case 'ElectrSign':
+      colorBtn.push('red');
+      break;
+    case 'Extern':
+      colorBtn.push('orange');
+      break;
+    case 'bkKeeping':
+      colorBtn.push('purple');
+      break;
+    case 'Diadoc':
+      colorBtn.push('aqua');
+      break;
+    default:
+      break;
   }
 
   if (visible) {
@@ -27,16 +56,18 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
 
   const Send = async (e) => {
     e.preventDefault();
+
     setData({
       fio: data.fio,
       email: data.email,
       number: data.number,
     });
 
-    if (data.fio === '' && data.email === '' && data.number === '') {
+    if (data.email === '' && data.fio === '' && data.number === '') {
       return;
+    } else {
+      setSendForm(true);
     }
-    setSendForm(true);
 
     const response = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
       method: 'POST',
@@ -47,6 +78,57 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const Close = () => {
     document.body.style.overflow = '';
     setVisible(false);
+  };
+
+  const fioHendler = (e) => {
+    setFio(e.target.value);
+    const re = /^[а-яА-Я ]+$/;
+    if (!re.test(String(e.target.value))) {
+      setFioError('Фио введены некорректно!');
+    } else {
+      setFioError('');
+      setData({ ...data, fio: e.target.value });
+    }
+  };
+
+  const numberHendler = (number) => {
+    setNumber(number);
+    const re = /^[+]*[0-9]+$/;
+    if (!re.test(String(number))) {
+      setNumberError('Номер введен некорректно!');
+    } else {
+      setNumberError('');
+      setData({ ...data, number: number });
+    }
+  };
+
+  const emailHendler = (e) => {
+    setEmail(e.target.value);
+    const re =
+      /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\]\\.,;:\s@\\"]+\.)+[^<>()[\]\\.,;:\s@\\"]{2,})$/i;
+
+    if (!re.test(String(e.target.value).toLowerCase())) {
+      setEmailError('Email введен некорректно!');
+    } else {
+      setEmailError('');
+      setData({ ...data, email: e.target.value });
+    }
+  };
+
+  const blurHendler = (e) => {
+    switch (e.target.name) {
+      case 'fio':
+        setFioDirty(true);
+        break;
+      case 'email':
+        setEmailDirty(true);
+        break;
+      case 'number':
+        setNumberDirty(true);
+        break;
+      default:
+        break;
+    }
   };
 
   return (
@@ -96,6 +178,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
             </defs>
           </svg>
         </div>
+
         {!sendForm ? (
           <div className="body">
             <div className="body__title">
@@ -108,37 +191,43 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
                   <input
                     type="text"
                     placeholder="Ваше имя и фамилия"
-                    name="Fio"
+                    name="fio"
                     required
-                    value={data.fio}
-                    onChange={(e) => setData({ ...data, fio: e.target.value })}
+                    value={fio}
+                    onBlur={(e) => blurHendler(e)}
+                    onChange={(e) => fioHendler(e)}
                   />
+                  {fioDirty && fioError && <div className="error">{fioError}</div>}
                 </div>
 
                 <div className="inputBox">
                   <input
                     type="email"
                     placeholder="E-mail"
-                    name="Email"
+                    name="email"
                     required
-                    value={data.email}
-                    onChange={(e) => setData({ ...data, email: e.target.value })}
+                    value={email}
+                    onBlur={(e) => blurHendler(e)}
+                    onChange={(e) => emailHendler(e)}
                   />
+                  {emailDirty && emailError && <div className="error">{emailError}</div>}
                 </div>
 
                 <div className="inputBox">
-                  <input
+                  <PhoneInput
                     type="tel"
+                    name="number"
+                    maxLength={16}
+                    minLength={16}
                     placeholder="+7 949 000 0000"
-                    name="Phone"
-                    required
-                    maxLength={11}
-                    value={data.number}
-                    onChange={(e) => setData({ ...data, number: e.target.value })}
-                  />
+                    value={number}
+                    onBlur={(e) => blurHendler(e)}
+                    onChange={(e) => numberHendler(e)}
+                  ></PhoneInput>
+                  {numberDirty && numberError && <div className="error">{numberError}</div>}
                 </div>
 
-                <ButtonUi className={colorBtn.join(' ')} onClick={Send}>
+                <ButtonUi className={colorBtn.join(' ')} onClick={Send} disabled={!validForm}>
                   Отправить заявку
                 </ButtonUi>
               </div>

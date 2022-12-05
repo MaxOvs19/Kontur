@@ -11,4 +11,18 @@
   font-weight: $bolt;
   width: 259px;
   height: 70px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+button[disabled] {
+  transition: 0.5s;
+  background-color: grey;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
