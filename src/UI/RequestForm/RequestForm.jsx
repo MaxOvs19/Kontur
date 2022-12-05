@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ButtonUi from '../button/ButtonUi';
+
 import './RequestForm.scss';
 
 const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
@@ -7,17 +8,35 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const colorBtn = ['body__submit'];
 
   const [sendForm, setSendForm] = useState(false);
-
   const [data, setData] = useState({ fio: '', email: '', number: '' });
 
-  if (type === 'ElectrSign') {
-    colorBtn.push('red');
-  } else if (type === 'Extern') {
-    colorBtn.push('orange');
-  } else if (type === 'bkKeeping') {
-    colorBtn.push('purple');
-  } else if (type === 'Diadoc') {
-    colorBtn.push('aqua');
+  const [email, setEmail] = useState('');
+  const [fio, setFio] = useState('');
+  const [number, setNumber] = useState('');
+
+  const [emailDirty, setEmailDirty] = useState(false);
+  const [fioDirty, setFioDirty] = useState(false);
+  const [numberDirty, setNumberDirty] = useState(false);
+
+  const [emailError, setEmailError] = useState('Неверно введен E-mail!');
+  const [fioError, setFioError] = useState('Неверно введены ФИО!');
+  const [numberError, setNumberError] = useState('Неверно введен номер!');
+
+  switch (type) {
+    case 'ElectrSign':
+      colorBtn.push('red');
+      break;
+    case 'Extern':
+      colorBtn.push('orange');
+      break;
+    case 'bkKeeping':
+      colorBtn.push('purple');
+      break;
+    case 'Diadoc':
+      colorBtn.push('aqua');
+      break;
+    default:
+      break;
   }
 
   if (visible) {
@@ -47,6 +66,57 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const Close = () => {
     document.body.style.overflow = '';
     setVisible(false);
+  };
+
+  const fioHendler = (e) => {
+    setFio(e.target.value);
+    const re = /^[а-яА-Я ]+$/;
+    if (!re.test(String(e.target.value))) {
+      setFioError('Фио введены некорректно!');
+    } else {
+      setFioError('');
+      setData({ ...data, fio: e.target.value });
+    }
+  };
+
+  const numberHendler = (e) => {
+    setNumber(e.target.value);
+    const re = /^[0-9]+$/;
+    if (!re.test(String(e.target.value))) {
+      setNumberError('Номер введен некорректно!');
+    } else {
+      setNumberError('');
+      setData({ ...data, number: e.target.value });
+    }
+  };
+
+  const emailHendler = (e) => {
+    setEmail(e.target.value);
+    const re =
+      /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\]\\.,;:\s@\\"]+\.)+[^<>()[\]\\.,;:\s@\\"]{2,})$/i;
+
+    if (!re.test(String(e.target.value).toLowerCase())) {
+      setEmailError('Email введен некорректно!');
+    } else {
+      setEmailError('');
+      setData({ ...data, email: e.target.value });
+    }
+  };
+
+  const blurHendler = (e) => {
+    switch (e.target.name) {
+      case 'fio':
+        setFioDirty(true);
+        break;
+      case 'email':
+        setEmailDirty(true);
+        break;
+      case 'number':
+        setNumberDirty(true);
+        break;
+      default:
+        break;
+    }
   };
 
   return (
@@ -96,6 +166,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
             </defs>
           </svg>
         </div>
+
         {!sendForm ? (
           <div className="body">
             <div className="body__title">
@@ -108,34 +179,40 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
                   <input
                     type="text"
                     placeholder="Ваше имя и фамилия"
-                    name="Fio"
+                    name="fio"
                     required
-                    value={data.fio}
-                    onChange={(e) => setData({ ...data, fio: e.target.value })}
+                    value={fio}
+                    onBlur={(e) => blurHendler(e)}
+                    onChange={(e) => fioHendler(e)}
                   />
+                  {fioDirty && fioError && <div className="error">{fioError}</div>}
                 </div>
 
                 <div className="inputBox">
                   <input
                     type="email"
                     placeholder="E-mail"
-                    name="Email"
+                    name="email"
                     required
-                    value={data.email}
-                    onChange={(e) => setData({ ...data, email: e.target.value })}
+                    value={email}
+                    onBlur={(e) => blurHendler(e)}
+                    onChange={(e) => emailHendler(e)}
                   />
+                  {emailDirty && emailError && <div className="error">{emailError}</div>}
                 </div>
 
                 <div className="inputBox">
                   <input
                     type="tel"
                     placeholder="+7 949 000 0000"
-                    name="Phone"
+                    name="number"
                     required
                     maxLength={11}
-                    value={data.number}
-                    onChange={(e) => setData({ ...data, number: e.target.value })}
+                    value={number}
+                    onBlur={(e) => blurHendler(e)}
+                    onChange={(e) => numberHendler(e)}
                   />
+                  {numberDirty && numberError && <div className="error">{numberError}</div>}
                 </div>
 
                 <ButtonUi className={colorBtn.join(' ')} onClick={Send}>

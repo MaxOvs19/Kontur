@@ -76,6 +76,7 @@
         margin: 0 auto;
 
         .inputBox {
+          position: relative;
           display: flex;
           justify-content: center;
           background: #ffffff;
@@ -94,7 +95,12 @@
           margin: 11px;
           width: 137px;
           border: none;
+          border-radius: 7px;
           outline: none;
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          -ms-border-radius: 7px;
+          -o-border-radius: 7px;
         }
 
         input[placeholder] {
@@ -129,6 +135,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.error {
+  color: red;
+  position: absolute;
+  font-size: 10px;
+  bottom: -15px;
+  left: 65px;
+  font-weight: $light;
 }
 
 .hide {
