@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2ecde122.css",
-    "main.js": "/static/js/main.860a18ab.js",
+    "main.js": "/static/js/main.8612a0cf.js",
     "static/media/bg-extern.png": "/static/media/bg-extern.b0c6aadaf338ba69e84e.png",
     "static/media/diadocBg.png": "/static/media/diadocBg.a3f009b2cf57bb5a00c4.png",
     "static/media/LabGrotesque-Medium.ttf": "/static/media/LabGrotesque-Medium.dbfc938f23515b9be174.ttf",
@@ -21,10 +21,10 @@
     "static/media/lineFon.png": "/static/media/lineFon.cbf760cf94e681e1b39a.png",
     "index.html": "/index.html",
     "main.2ecde122.css.map": "/static/css/main.2ecde122.css.map",
-    "main.860a18ab.js.map": "/static/js/main.860a18ab.js.map"
+    "main.8612a0cf.js.map": "/static/js/main.8612a0cf.js.map"
   },
   "entrypoints": [
     "static/css/main.2ecde122.css",
-    "static/js/main.860a18ab.js"
+    "static/js/main.8612a0cf.js"
   ]
 }
