@@ -1,6 +1,14 @@
 import React from 'react';
 import './Ecosystem.scss';
 
+import tableLaptop from '../../assets/img/header/tableLaptop.png';
+import eagle from '../../assets/img/header/eagle.png';
+import buhgalteria from '../../assets/img/icons/buhgalteria.png';
+import medal from '../../assets/img/icons/medal.png';
+import diadoc from '../../assets/img/icons/diadoc.png';
+import extern from '../../assets/img/icons/extern.png';
+import greenTick from '../../assets/img/icons/greenTick.png';
+
 const Ecosystem = () => {
   return (
     <div className="ecosistem">
@@ -9,37 +17,29 @@ const Ecosystem = () => {
       </div>
       <div className="ecosistem__box">
         <div className="icons icons_title">
-          <img src={require('../../assets/img/icons/greenTick.png')} alt="#" />
+          <img src={greenTick} alt="#" />
           <p>Донецкая Народная Республика</p>
         </div>
         <div className="table">
           <div className="icons">
-            <img src={require('../../assets/img/icons/extern.png')} alt="#" />
+            <img src={extern} alt="#" />
             <a href="#externLink">Экстерн</a>
           </div>
           <div className="icons">
-            <img src={require('../../assets/img/icons/diadoc.png')} alt="#" />
+            <img src={diadoc} alt="#" />
             <a href="#diadocLink">Диадок</a>
           </div>
 
-          <img
-            src={require('../../assets/img/header/tableLaptop.png')}
-            alt="#"
-            className="table__table"
-          />
-          <img
-            src={require('../../assets/img/header/eagle.png')}
-            alt="#"
-            className="table__eagle"
-          />
+          <img src={tableLaptop} alt="#" className="table__table" />
+          <img src={eagle} alt="#" className="table__eagle" />
         </div>
         <div className="table">
           <div className="icons">
-            <img src={require('../../assets/img/icons/medal.png')} alt="#" />
+            <img src={medal} alt="#" />
             <a href="#epcLink">ЭЦП</a>
           </div>
           <div className="icons">
-            <img src={require('../../assets/img/icons/buhgalteria.png')} alt="#" />
+            <img src={buhgalteria} alt="#" />
             <a href="#bkLink">Бухгалтерия</a>
           </div>
         </div>

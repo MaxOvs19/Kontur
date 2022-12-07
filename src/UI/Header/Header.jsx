@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import Ecosystem from '../../components/EcosystemBusiness/Ecosystem';
-import ButtonUi from '../button/ButtonUi';
-import MenuBurger from '../MenuBurger/MenuBurger';
-import RequestForm from '../../UI/RequestForm/RequestForm';
 import './Header.scss';
+import Ecosystem from '../../components/EcosystemBusiness/Ecosystem';
+import MenuBurger from '../MenuBurger/MenuBurger';
+
+import ButtonUi from '../button/ButtonUi';
+import RequestForm from '../../UI/RequestForm/RequestForm';
+
+import telegramImg from '../../assets/img/footer/telegram.png';
 
 const Header = () => {
   const [menuMobile, setMenuMobile] = useState(false);
@@ -152,7 +155,7 @@ const Header = () => {
             </a>
 
             <a href="#telega">
-              <img src={require('../../assets/img/footer/telegram.png')} alt="" />
+              <img src={telegramImg} alt="#" />
             </a>
           </div>
         </div>

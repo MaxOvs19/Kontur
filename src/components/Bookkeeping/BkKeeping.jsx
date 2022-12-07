@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import './BkKeeping.scss';
+
 import ButtonUi from '../../UI/button/ButtonUi';
 import RequestForm from '../../UI/RequestForm/RequestForm';
-import './BkKeeping.scss';
+
+import bgBk from '../../assets/img/bkKeeping/bgBk.png';
+import bkBig from '../../assets/img/icons/bkBig.png';
 
 const BkKeeping = () => {
   const [modal, setModal] = useState(false);
@@ -9,10 +13,10 @@ const BkKeeping = () => {
     <div className="wrapper">
       <div className="bkKeeping" id="bkLink">
         <div className="bkKeeping__body">
-          <img src={require('../../assets/img/bkKeeping/bgBk.png')} alt="#" />
+          <img src={bgBk} alt="#" />
           <div className="text">
             <div className="text__title">
-              <img src={require('../../assets/img/icons/bkBig.png')} alt="#" />
+              <img src={bkBig} alt="#" />
               <h2>Бухгалтерия</h2>
             </div>
             <p>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Footer.scss';
 
+import telegramImg from '../../assets/img/footer/telegram.png';
+
 const Footer = () => {
   return (
     <div>
@@ -88,7 +90,7 @@ const Footer = () => {
             </a>
 
             <a href="#telega">
-              <img src={require('../../assets/img/footer/telegram.png')} alt="" />
+              <img src={telegramImg} alt="#" />
             </a>
           </li>
         </nav>

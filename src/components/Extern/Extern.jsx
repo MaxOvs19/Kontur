@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import './Extern.scss';
+
 import ButtonUi from '../../UI/button/ButtonUi';
 import RequestForm from '../../UI/RequestForm/RequestForm';
-import './Extern.scss';
+
+import externBig from '../../assets/img/icons/externBig.png';
+import bg_extern from '../../assets/img/extern/bg-extern.png';
 
 const Extern = () => {
   const [modal, setModal] = useState(false);
@@ -19,7 +23,7 @@ const Extern = () => {
       <div className="extern__body">
         <div className="text">
           <div className="text__title">
-            <img src={require('../../assets/img/icons/externBig.png')} alt="#" />
+            <img src={externBig} alt="#" />
             <h2>Экстерн</h2>
           </div>
           <p>
@@ -32,8 +36,9 @@ const Extern = () => {
             Отправить заявку
           </ButtonUi>
         </div>
-        <img src={require('../../assets/img/extern/bg-extern.png')} alt="#" className="bg-extern" />
+        <img src={bg_extern} alt="#" className="bg-extern" />
       </div>
+
       <RequestForm
         visible={modal}
         setVisible={setModal}

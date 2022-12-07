@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ButtonUi from '../../UI/button/ButtonUi';
 import './ElectrSign.scss';
 import RequestForm from '../../UI/RequestForm/RequestForm';
+import flDriveFon from '../../assets/img/systemBusiness/flDriveFon.png';
+import lineFon from '../../assets/img/systemBusiness/lineFon.png';
 
 const ElectrSign = () => {
   const [modal, setModal] = useState(false);
@@ -30,7 +32,7 @@ const ElectrSign = () => {
           </p>
 
           <h4>Адрес:</h4>
-          <p>Донецкая республика, г. Донецк, ул. Мира Проспект, 17, 9 этаж, 95 офис </p>
+          <p>Донецкая республика, г.Донецк, ул. Мира Проспект, 17, 9 этаж, 95 офис </p>
 
           <h4>Контакты</h4>
           <ul>
@@ -72,16 +74,9 @@ const ElectrSign = () => {
               <li>Федресурс (ЕФРСДЮЛ и ЕФРСБ);</li>
               <li>Электронный ПТС (ЭПТС).</li>
             </ul>
-            <img
-              src={require('../../assets/img/systemBusiness/flDriveFon.png')}
-              alt="#"
-              className="description__img_drive"
-            />
-            <img
-              src={require('../../assets/img/systemBusiness/lineFon.png')}
-              alt="#"
-              className="description__img_line"
-            />
+
+            <img src={flDriveFon} alt="#" className="description__img_drive" />
+            <img src={lineFon} alt="#" className="description__img_line" />
           </div>
         </div>
       </div>

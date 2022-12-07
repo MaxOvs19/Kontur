@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import ButtonUi from '../button/ButtonUi';
-import 'react-phone-number-input/style.css';
-import PhoneInput from 'react-phone-number-input';
 import './RequestForm.scss';
+
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
+
+import ButtonUi from '../button/ButtonUi';
+
+import sendIcon from '../../assets/img/icons/sendIcon.png';
 
 const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   const rootClasses = ['modal'];
@@ -240,7 +244,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
               <h5>Ваша заявка принята, в течение получаса консультант вам перезвонит</h5>
             </div>
             <div className="send__img">
-              <img src={require('../../assets/img/icons/sendIcon.png')} alt="#" />
+              <img src={sendIcon} alt="#" />
             </div>
           </div>
         )}
