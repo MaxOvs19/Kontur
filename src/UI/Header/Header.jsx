@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import Ecosystem from '../../components/EcosystemBusiness/Ecosystem';
 import ButtonUi from '../button/ButtonUi';
 import MenuBurger from '../MenuBurger/MenuBurger';
+import RequestForm from '../../UI/RequestForm/RequestForm';
 import './Header.scss';
 
 const Header = () => {
   const [menuMobile, setMenuMobile] = useState(false);
+  const [modal, setModal] = useState(false);
 
   const rootClasses = ['menuMobail'];
 
@@ -72,7 +74,17 @@ const Header = () => {
               strokeWidth="0.2"
             />
           </svg>
-          <ButtonUi>Отправить заявку</ButtonUi>
+
+          <RequestForm
+            visible={modal}
+            setVisible={setModal}
+            title={'электронную подпись'}
+            titleMini={'Получить ЭЦП в Донецке'}
+            type={'ElectrSign'}
+          ></RequestForm>
+
+          <ButtonUi onClick={setModal}>Отправить заявку</ButtonUi>
+
           <p>Пишите нам!</p>
           <div>
             <a href="#facebook">
