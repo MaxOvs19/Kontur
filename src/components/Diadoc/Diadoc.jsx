@@ -4,12 +4,12 @@ import './Diadoc.scss';
 import ButtonUi from '../../UI/button/ButtonUi';
 import RequestForm from '../../UI/RequestForm/RequestForm';
 
-import diadocBig from '../../assets/img/icons/diadocBig.png';
 import diadocBg from '../../assets/img/diadoc/diadocBg.png';
 import medalBlack from '../../assets/img/diadoc/medalBlack.png';
 import timeClock from '../../assets/img/diadoc/timeClock.png';
 import lineKontur from '../../assets/img/diadoc/lineKontur.png';
 import iconKontur from '../../assets/img/diadoc/iconKontur.png';
+import diadocBig from '../../assets/img/icons/diadocBig.png';
 
 const Diadoc = () => {
   const [modalDiadoc, setModalDiadoc] = useState(false);
