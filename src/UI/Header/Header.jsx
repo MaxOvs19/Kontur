@@ -51,7 +51,7 @@ const Header = () => {
           <nav className="header__nav">
             <li>071 501 53 53</li>
             <li>
-              <a href="#map">Где мы находимЬся</a>
+              <a href="#map">Где мы находимся</a>
             </li>
           </nav>
         </div>
