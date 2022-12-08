@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { PostService } from '../../services/post/post.service';
 import './RequestForm.scss';
 
 import PhoneInput from 'react-phone-number-input';
@@ -59,6 +60,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
   }
 
   const Send = async (e) => {
+    const url = 'https://jsonplaceholder.typicode.com/posts';
     e.preventDefault();
 
     setData({
@@ -73,10 +75,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }) => {
       setSendForm(true);
     }
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
+    PostService.postData(url, data);
   };
 
   const Close = () => {
