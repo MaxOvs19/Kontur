@@ -2,7 +2,7 @@ import React from 'react';
 
 const TmIcon = () => {
      return <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <g clip-path="url(#clip0_296_13)">
+     <g clipPath="url(#clip0_296_13)">
      <path d="M17.0011 34.0022C26.3906 34.0022 34.0022 26.3906 34.0022 
      17.0011C34.0022 7.61166 26.3906 0 17.0011 0C7.61166 0 0 7.61166 0 
      17.0011C0 26.3906 7.61166 34.0022 17.0011 34.0022Z" fill="url(#paint0_linear_296_13)"/>
@@ -16,8 +16,8 @@ const TmIcon = () => {
      <defs>
      <linearGradient id="paint0_linear_296_13" x1="4.97961" y1="4.97961" x2="29.0204" 
      y2="29.0204" gradientUnits="userSpaceOnUse">
-     <stop stop-color="#00AFE5"/>
-     <stop offset="1" stop-color="#0094D4"/>
+     <stop stopColor="#00AFE5"/>
+     <stop offset="1" stopColor="#0094D4"/>
      </linearGradient>
      <clipPath id="clip0_296_13">
      <rect width="34" height="34" fill="white"/>

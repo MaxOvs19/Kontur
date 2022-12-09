@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Extern.scss';
 
 import ButtonUi from '../../UI/button/button-ui';
-import RequestForm from '../../UI/RequestForm/RequestForm';
+import RequestForm from '../../UI/request-form/request-form';
 
 import externBig from '../../assets/img/icons/externBig.png';
 import bg_extern from '../../assets/img/extern/bg-extern.png';
@@ -32,7 +32,7 @@ const Extern = () => {
             самозанятым.
           </p>
 
-          <ButtonUi className={'text__btn'} onClick={() => setModal(true)}>
+          <ButtonUi classNameAdd={'text__btn'} onClickBtn={() => setModal(true)}>
             Отправить заявку
           </ButtonUi>
         </div>

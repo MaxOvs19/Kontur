@@ -3,7 +3,7 @@ import React from 'react';
 import { IbuttonUi } from './button-ui.props';
 import './button-ui.scss';
 
-const ButtonUi = ({ children, classNameAdd, ...props }:IbuttonUi) => {
+const ButtonUi = ({ children, disabledBtn, classNameAdd, onClickBtn, ...props }:IbuttonUi) => {
   const styles = ['buttonUi'];
 
   if (classNameAdd) {
@@ -11,7 +11,7 @@ const ButtonUi = ({ children, classNameAdd, ...props }:IbuttonUi) => {
   }
 
   return (
-    <button {...props} className={styles.join(' ')} >
+    <button {...props} className={styles.join(' ')} onClick={onClickBtn} disabled={disabledBtn}>
       {children}
     </button>
   );

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './header.scss';
-// import Ecosystem from '../../components/EcosystemBusiness/Ecosystem';
+// import Ecosystem from '../../components/EcosystemBusiness/Ecosystem.jsx';
 import MenuBurger from '../menu-burger/menu-burger';
 
 import ButtonUi from '../button/button-ui';
-// import RequestForm from '../RequestForm/RequestForm';
+import RequestForm from '../request-form/request-form';
 
 import TmIcon from '../icons/telegram/tmIcon';
 import InstIcon from '../icons/inst/instIcon';
@@ -23,7 +23,9 @@ const Header = () => {
   if (menuMobile === true) {
     rootClasses.push('active');
   } else {
-    // rootClasses.splice(0, 'active');
+    let index:number;    
+    index = rootClasses.indexOf('active');
+    rootClasses.splice(0, index);
   }
 
   const toggleModal = () => {
@@ -77,15 +79,15 @@ const Header = () => {
             />
           </svg>
 
-          {/* <RequestForm
+          <RequestForm
             visible={modal}
             setVisible={setModal}
             title={'электронную подпись'}
             titleMini={'Получить ЭЦП в Донецке'}
             type={'ElectrSign'}
-          ></RequestForm> */}
+          ></RequestForm>
 
-          {/* <ButtonUi onClick={toggleModal}>Отправить заявку</ButtonUi> */}
+          <ButtonUi onClickBtn={toggleModal} >Отправить заявку</ButtonUi>
 
           <p>Пишите нам!</p>
           <div>

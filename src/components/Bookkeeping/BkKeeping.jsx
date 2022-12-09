@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './BkKeeping.scss';
 
 import ButtonUi from '../../UI/button/button-ui';
-import RequestForm from '../../UI/RequestForm/RequestForm';
+import RequestForm from '../../UI/request-form/request-form';
 
 import bgBk from '../../assets/img/bkKeeping/bgBk.png';
 import bkBig from '../../assets/img/icons/bkBig.png';
@@ -24,7 +24,7 @@ const BkKeeping = () => {
               отчетности в контролирующие органы через интернет.
             </p>
 
-            <ButtonUi className={'text__btn'} onClick={() => setModal(true)}>
+            <ButtonUi classNameAdd={'text__btn'} onClickBtn={() => setModal(true)}>
               Отправить заявку
             </ButtonUi>
           </div>

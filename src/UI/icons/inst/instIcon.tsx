@@ -2,12 +2,12 @@ import React from 'react';
 
 const InstIcon = () => {
      return <svg width="34" height="35" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-     <path fill-rule="evenodd" clip-rule="evenodd" d="M17 34.7581C26.3888 
+     <path fillRule="evenodd" clipRule="evenodd" d="M17 34.7581C26.3888 
      34.7581 34 27.1223 34 17.703C34 8.28377 
      26.3888 0.647949 17 0.647949C7.61116 0.647949 
      0 8.28377 0 17.703C0 27.1223 7.61116 34.7581 17 34.7581Z" fill="#F03B36"/>
      
-     <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 8.67383C19.8085 
+     <path fillRule="evenodd" clipRule="evenodd" d="M17.5 8.67383C19.8085 
      8.67383 20.0979 8.68364 21.0045 8.72514C21.9093 8.76654 22.5272 8.91071 
      23.0678 9.12153C23.6268 9.33942 24.1008 9.63101 24.5734 10.1051C25.0459 
      10.5792 25.3366 11.0547 25.5538 11.6155C25.7639 12.1579 25.9076 12.7778 
