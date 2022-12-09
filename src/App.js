@@ -2,9 +2,11 @@ import BkKeeping from './components/Bookkeeping/BkKeeping';
 import Diadoc from './components/Diadoc/Diadoc';
 import ElectrSign from './components/ElectrSign/ElectrSign';
 import Extern from './components/Extern/Extern';
-import Footer from './UI/Footer/Footer';
-import Header from './UI/Header/Header';
+
+import Footer from './UI/footer/footer.tsx';
+import Header from './UI/header/header.tsx';
 import React from 'react';
+
 import './App.css';
 
 function App() {

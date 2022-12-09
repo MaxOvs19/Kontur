@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Diadoc.scss';
 
-import ButtonUi from '../../UI/button/ButtonUi';
+import ButtonUi from '../../UI/button/button-ui';
 import RequestForm from '../../UI/RequestForm/RequestForm';
 
 import diadocBg from '../../assets/img/diadoc/diadocBg.png';

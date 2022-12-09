@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Extern.scss';
 
-import ButtonUi from '../../UI/button/ButtonUi';
+import ButtonUi from '../../UI/button/button-ui';
 import RequestForm from '../../UI/RequestForm/RequestForm';
 
 import externBig from '../../assets/img/icons/externBig.png';

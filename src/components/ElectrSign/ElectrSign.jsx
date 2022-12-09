@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ButtonUi from '../../UI/button/ButtonUi';
+import ButtonUi from '../../UI/button/button-ui';
 import './ElectrSign.scss';
 import RequestForm from '../../UI/RequestForm/RequestForm';
 import flDriveFon from '../../assets/img/systemBusiness/flDriveFon.png';

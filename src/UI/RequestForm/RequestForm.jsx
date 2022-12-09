@@ -5,7 +5,7 @@ import './RequestForm.scss';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
-import ButtonUi from '../button/ButtonUi';
+import ButtonUi from '../button/button-ui';
 
 import sendIcon from '../../assets/img/icons/sendIcon.png';
 
