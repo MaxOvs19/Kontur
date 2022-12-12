@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ElectrSign.scss';
+import './electro-sign.scss';
 
 import ButtonUi from '../../UI/button/button-ui';
 import RequestForm from '../../UI/request-form/request-form';

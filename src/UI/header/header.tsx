@@ -63,7 +63,7 @@ const Header = () => {
         <div className="menuMobail__content">
           <h2>071 501 53 53</h2>
           <h4>Где мы находимся</h4>
-          <BackArrow click={removeMenu}/>
+          <BackArrow onClickAdd={removeMenu}/>
 
           <RequestForm
             visible={modal}

@@ -1,13 +1,14 @@
 import React from 'react';
+import { IBackArrow } from './back-arrow.props';
 
-const BackArrow = (props) => {
+const BackArrow = ({onClickAdd, ...props}:IBackArrow) => {
      return <svg width="10"
      height="16"
      viewBox="0 0 10 16"
      fill="none"
      xmlns="http://www.w3.org/2000/svg"
      className="back"
-     onClick={props.click}
+     onClick={onClickAdd}
    >
      <path
        d="M8.93026 13.8388L8.93047 13.8386L8.93477 
