@@ -7,7 +7,7 @@ import 'react-phone-number-input/style.css';
 
 import ButtonUi from '../button/button-ui';
 
-// import sendIcon from '../../assets/img/icons/sendIcon.png';
+import sendIcon from '../../assets/img/icons/sendIcon.png';
 import LogoKnr from '../icons/logo-kontur/logoKnr';
 import { IForm } from './request-form.props';
 
@@ -257,7 +257,7 @@ const RequestForm = ({ visible, setVisible, title, titleMini, type }:IForm) => {
               <h5>Ваша заявка принята, в течение получаса консультант вам перезвонит</h5>
             </div>
             <div className="send__img">
-              {/* <img src={sendIcon} alt="#" /> */}
+              <img src={sendIcon} alt="#" />
             </div>
           </div>
         )}

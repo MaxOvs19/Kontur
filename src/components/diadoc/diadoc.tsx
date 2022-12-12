@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Diadoc.scss';
+import './diadoc.scss';
 
 import ButtonUi from '../../UI/button/button-ui';
 import RequestForm from '../../UI/request-form/request-form';

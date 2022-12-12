@@ -1,7 +1,7 @@
-import BkKeeping from './components/Bookkeeping/BkKeeping';
-import Diadoc from './components/Diadoc/Diadoc';
-import ElectrSign from './components/ElectrSign/ElectrSign';
-import Extern from './components/Extern/Extern';
+import BkKeeping from './components/Bookkeeping/bk-keeping.tsx';
+import Diadoc from './components/diadoc/diadoc';
+import ElectrSign from './components/electro-sign/electro-sign';
+import Extern from './components/extern/extern';
 
 import Footer from './UI/footer/footer.tsx';
 import Header from './UI/header/header.tsx';
