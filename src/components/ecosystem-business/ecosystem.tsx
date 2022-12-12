@@ -1,5 +1,5 @@
 import React from 'react';
-import './Ecosystem.scss';
+import './ecosystem.scss';
 
 import tableLaptop from '../../assets/img/header/tableLaptop.png';
 import eagle from '../../assets/img/header/eagle.png';

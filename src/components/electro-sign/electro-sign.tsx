@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import ButtonUi from '../../UI/button/ButtonUi';
 import './ElectrSign.scss';
-import RequestForm from '../../UI/RequestForm/RequestForm';
+
+import ButtonUi from '../../UI/button/button-ui';
+import RequestForm from '../../UI/request-form/request-form';
+
 import flDriveFon from '../../assets/img/systemBusiness/flDriveFon.png';
 import lineFon from '../../assets/img/systemBusiness/lineFon.png';
 
@@ -82,7 +84,7 @@ const ElectrSign = () => {
       </div>
 
       <div className="electrSign__request">
-        <ButtonUi onClick={() => setModal(true)}>Отправить заявку</ButtonUi>
+        <ButtonUi onClickBtn={() => setModal(true)}>Отправить заявку</ButtonUi>
         <p>Оставьте заявку, и мы подберем подпись под ваши задачи</p>
       </div>
 

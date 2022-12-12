@@ -1,11 +1,10 @@
 export class PostService {
-  static async postData(url, data) {
+  public static async postData(url: string, data: object) {
     const response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(data),
     })
       .then((response) => {
-        debugger;
         if (response.ok) {
           console.log('Success');
         } else {

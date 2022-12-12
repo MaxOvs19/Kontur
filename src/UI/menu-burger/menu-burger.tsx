@@ -1,7 +1,7 @@
 import React from 'react';
-import './MenuBurger.scss';
+import './menu-burger.scss';
 
-const MenuBurger = (props) => {
+const MenuBurger = ({...props}) => {
   return (
     <div className="menu-btn" {...props}>
       <span></span>
