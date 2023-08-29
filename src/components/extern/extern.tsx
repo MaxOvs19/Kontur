@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './extern.scss'
 
-import ButtonUi from '../common/button/button'
+import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
 import externBig from '../../assets/img/icons/externBig.png'
@@ -33,12 +33,9 @@ const Extern = () => {
             бухгалтерским фирмам, бухгалтерам-фрилансерам и самозанятым.
           </p>
 
-          <ButtonUi
-            classNameAdd={'text__btn'}
-            onClickBtn={() => setModal(true)}
-          >
+          <Button className={'text__btn'} onClick={() => setModal(true)}>
             Отправить заявку
-          </ButtonUi>
+          </Button>
         </div>
         <img src={bg_extern} alt='#' className='bg-extern' />
       </div>

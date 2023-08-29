@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 @import '../../styles/fonts';
 
-.electrSign {
+.electronic-signature {
   &__title {
     color: $black;
     margin-top: 80px;
@@ -148,7 +148,7 @@
 
 /*576px - 768px*/
 @media (max-width: 768px) {
-  .electrSign {
+  .electronic-signature {
     &__title {
       text-align: center;
       p {
@@ -199,7 +199,7 @@
 
 /*320px - 576px*/
 @media (max-width: 576px) {
-  .electrSign {
+  .electronic-signature {
     &__title {
       margin-top: 30px;
       text-align: center;

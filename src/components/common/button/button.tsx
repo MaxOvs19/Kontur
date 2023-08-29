@@ -1,31 +1,31 @@
 import React from 'react'
 
-import { IbuttonUi } from './button.props'
+import { IButton } from './button.props'
 import './button.scss'
 
-const ButtonUi = ({
+const Button = ({
   children,
-  disabledBtn,
-  classNameAdd,
-  onClickBtn,
+  disabled,
+  className,
+  onClick,
   ...props
-}: IbuttonUi) => {
-  const styles = ['buttonUi']
+}: IButton) => {
+  const styles = ['button']
 
-  if (classNameAdd) {
-    styles.push(classNameAdd)
+  if (className) {
+    styles.push(className)
   }
 
   return (
     <button
       {...props}
       className={styles.join(' ')}
-      onClick={onClickBtn}
-      disabled={disabledBtn}
+      onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
   )
 }
 
-export default ButtonUi
+export default Button

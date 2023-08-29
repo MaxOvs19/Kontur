@@ -2,11 +2,11 @@ import React from 'react'
 
 import BkKeeping from './components/Bookkeeping/bk-keeping.tsx'
 import Diadoc from './components/diadoc/diadoc'
-import ElectrSign from './components/electro-sign/electro-sign'
+import ElectronicSignature from './components/electronic-signature/electronic-signature'
 import Extern from './components/extern/extern'
 
-import Header from './components/header/header.tsx'
-import Footer from './components/footer/footer.tsx'
+import Footer from './components/footer/footer'
+import Header from './components/header/header'
 
 import './App.css'
 
@@ -15,7 +15,7 @@ function App() {
     <div className='App'>
       <div className='container'>
         <Header />
-        <ElectrSign />
+        <ElectronicSignature />
         <Extern />
       </div>
       <BkKeeping />

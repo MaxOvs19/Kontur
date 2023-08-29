@@ -1,7 +1,7 @@
 import React from 'react'
 import { IBackArrow } from './back-arrow.props'
 
-const BackArrow = ({ onClickAdd, ...props }: IBackArrow) => {
+const BackArrow = ({ onClick }: IBackArrow) => {
   return (
     <svg
       width='10'
@@ -10,7 +10,7 @@ const BackArrow = ({ onClickAdd, ...props }: IBackArrow) => {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       className='back'
-      onClick={onClickAdd}
+      onClick={onClick}
     >
       <path
         d='M8.93026 13.8388L8.93047 13.8386L8.93477 

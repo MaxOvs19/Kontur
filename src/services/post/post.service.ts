@@ -1,6 +1,6 @@
 export class PostService {
-  public static async postData(url: string, data: object) {
-    const response = await fetch(url, {
+  public static async postData(data: object) {
+    const response = await fetch('google.ru', {
       method: 'POST',
       body: JSON.stringify(data)
     })

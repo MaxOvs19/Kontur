@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import Ecosystem from '../ecosystem-business/ecosystem'
 import MenuBurger from '../common/menu-burger/menu-burger'
-import ButtonUi from '../common/button/button'
+import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 import TelegramIcon from '../common/icons/telegram/telegramIcon'
 import LogoKontur from '../common/icons/logo-kontur/logoKontur'
@@ -16,24 +16,10 @@ const Header = () => {
 
   const rootClasses = ['menu-mobile']
 
-  if (menuMobile === true) {
+  if (menuMobile) {
     rootClasses.push('active')
   } else {
-    let index: number
-    index = rootClasses.indexOf('active')
-    rootClasses.splice(0, index)
-  }
-
-  const toggleModal = () => {
-    setModal(true)
-  }
-
-  const activeMenu = () => {
-    setMenuMobile(true)
-  }
-
-  const removeMenu = () => {
-    setMenuMobile(false)
+    rootClasses.splice(0, rootClasses.indexOf('active'))
   }
 
   return (
@@ -41,7 +27,7 @@ const Header = () => {
       <div className='header'>
         <div className='wrapper'>
           <div className='header__logo'>
-            <MenuBurger onClick={activeMenu} />
+            <MenuBurger onClick={() => setMenuMobile(true)} />
             <LogoKontur />
             <h2>Официальный партнер в ДНР</h2>
           </div>
@@ -62,18 +48,16 @@ const Header = () => {
             <a href='tel:+79495035151'>+7 949 503 51 51</a>
           </h2>
           <h4>Где мы находимся</h4>
-          <BackArrow onClickAdd={removeMenu} />
+          <BackArrow onClick={() => setMenuMobile(false)} />
 
           <RequestForm
             visible={modal}
             setVisible={setModal}
             title={'электронную подпись'}
             titleMini={'Получить ЭЦП в Донецке'}
-            type={'ElectrSign'}
+            type={'ElectronicSignature'}
           ></RequestForm>
-
-          <ButtonUi onClickBtn={toggleModal}>Отправить заявку</ButtonUi>
-
+          <Button onClick={() => setModal(true)}>Отправить заявку</Button>
           <p>Пишите нам!</p>
           <div>
             <a href='#telegram'>

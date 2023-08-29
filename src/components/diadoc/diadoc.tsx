@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './diadoc.scss'
 
-import ButtonUi from '../common/button/button'
+import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
 import diadocBg from '../../assets/img/diadoc/diadocBg.png'
@@ -62,12 +62,9 @@ const Diadoc = () => {
             type={'Diadoc'}
           ></RequestForm>
 
-          <ButtonUi
-            classNameAdd={'requestBtn'}
-            onClickBtn={() => setModalDiadoc(true)}
-          >
+          <Button className={'requestBtn'} onClick={() => setModalDiadoc(true)}>
             Отправить заявку
-          </ButtonUi>
+          </Button>
         </div>
       </div>
       <div className='diadoc__logo'>
@@ -83,12 +80,9 @@ const Diadoc = () => {
         </div>
 
         <div className='box__text'>
-          <ButtonUi
-            classNameAdd={'requestBtn'}
-            onClickBtn={() => setModal(true)}
-          >
+          <Button className={'requestBtn'} onClick={() => setModal(true)}>
             Отправить заявку
-          </ButtonUi>
+          </Button>
           <ul>
             <li>Быстро разберетесь в интуитивно понятном интерфейсе сервиса</li>
             <li>Справитесь без дополнительных сотрудников</li>

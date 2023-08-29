@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './bk-keeping.scss'
 
-import ButtonUi from '../common/button/button'
+import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
 import bgBk from '../../assets/img/bkKeeping/bgBk.png'
@@ -26,12 +26,9 @@ const BkKeeping = () => {
               интернет.
             </p>
 
-            <ButtonUi
-              classNameAdd={'text__btn'}
-              onClickBtn={() => setModal(true)}
-            >
+            <Button className={'text__btn'} onClick={() => setModal(true)}>
               Отправить заявку
-            </ButtonUi>
+            </Button>
           </div>
         </div>
 

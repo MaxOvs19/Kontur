@@ -1,6 +1,6 @@
-export interface IbuttonUi {
-  onClickBtn(e: React.MouseEvent): void | Promise<void>
-  classNameAdd?: string
+export interface IButton {
+  onClick(e: React.MouseEvent): void | Promise<void>
+  className?: string
   children?: React.ReactNode
-  disabledBtn?: boolean
+  disabled?: boolean
 }

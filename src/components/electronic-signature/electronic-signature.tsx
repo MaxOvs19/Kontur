@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
-import './electro-sign.scss'
 
-import ButtonUi from '../common/button/button'
+import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
 import flDriveFon from '../../assets/img/systemBusiness/flDriveFon.png'
 import lineFon from '../../assets/img/systemBusiness/lineFon.png'
 
-const ElectrSign = () => {
+import './electronic-signature.scss'
+
+const ElectronicSignature = () => {
   const [modal, setModal] = useState(false)
 
   return (
     <div id='epcLink'>
-      <div className='electrSign__title'>
+      <div className='electronic-signature__title'>
         <h1>Электронная подпись в Донецке | Получить ЭЦП</h1>
         <p>
           Удостоверяющий центр выдает сертификаты электронной подписи для
@@ -20,7 +21,7 @@ const ElectrSign = () => {
         </p>
       </div>
 
-      <div className='electrSign__map'>
+      <div className='electronic-signature__map'>
         <iframe
           id='map'
           title='map'
@@ -93,7 +94,7 @@ const ElectrSign = () => {
       </div>
 
       <div className='electrSign__request'>
-        <ButtonUi onClickBtn={() => setModal(true)}>Отправить заявку</ButtonUi>
+        <Button onClick={() => setModal(true)}>Отправить заявку</Button>
         <p>Оставьте заявку, и мы подберем подпись под ваши задачи</p>
       </div>
 
@@ -102,10 +103,10 @@ const ElectrSign = () => {
         setVisible={setModal}
         title={'электронную подпись'}
         titleMini={'Получить ЭЦП в Донецке'}
-        type={'ElectrSign'}
+        type={'ElectronicSignature'}
       ></RequestForm>
     </div>
   )
 }
 
-export default ElectrSign
+export default ElectronicSignature
