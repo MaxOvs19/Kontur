@@ -1,0 +1,177 @@
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.45);
+
+  &__content {
+    z-index: 9999;
+    max-width: 657px;
+    width: 657px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #ffffff 0%, #dedede 100%);
+    border-radius: 40px;
+    padding: 25px;
+
+    .title {
+      position: relative;
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        margin: 6px 0 0 15px;
+        line-height: 10px;
+        font-size: 12px;
+        line-height: 10px;
+        color: $red;
+        width: 100px;
+      }
+
+      .exit {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        margin-bottom: 25px;
+        font-weight: $bolt;
+        margin-top: 50px;
+        text-align: center;
+
+        h2 {
+          font-size: 24px;
+          line-height: 26px;
+        }
+
+        h5 {
+          margin-top: 17px;
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: $light;
+        }
+      }
+
+      &__inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 85%;
+        margin: 0 auto;
+
+        .inputBox {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          background: #ffffff;
+          border: 2px solid #f3f3f3;
+          border-radius: 38px;
+          margin-bottom: 23px;
+          width: 240px;
+          height: 53px;
+          -webkit-border-radius: 38px;
+          -moz-border-radius: 38px;
+          -ms-border-radius: 38px;
+          -o-border-radius: 38px;
+        }
+
+        input {
+          margin: 11px;
+          width: 137px;
+          border: none;
+          border-radius: 7px;
+          outline: none;
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          -ms-border-radius: 7px;
+          -o-border-radius: 7px;
+        }
+
+        input[placeholder] {
+          font-size: 14px;
+          line-height: 17px;
+          color: #263238;
+        }
+      }
+
+      &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        width: 244px;
+        height: 53px;
+        font-size: 16px;
+        line-height: 66px;
+      }
+    }
+
+    .send {
+      &__img {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  position: absolute;
+  font-size: 10px;
+  bottom: -15px;
+  left: 65px;
+  font-weight: $light;
+}
+
+.hide {
+  display: none !important;
+}
+
+.red {
+  background-color: $red;
+}
+
+.orange {
+  background-color: $orange;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+.aqua {
+  background-color: $aqua;
+}
+
+.PhoneInputCountryIcon {
+  svg {
+    display: none;
+  }
+}
+
+/*320px - 576px*/
+@media (max-width: 576px) {
+}

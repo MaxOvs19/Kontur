@@ -1,31 +1,30 @@
-import BkKeeping from './components/Bookkeeping/bk-keeping.tsx';
-import Diadoc from './components/diadoc/diadoc';
-import ElectrSign from './components/electro-sign/electro-sign';
-import Extern from './components/extern/extern';
+import React from 'react'
 
-import Footer from './UI/footer/footer.tsx';
-import Header from './UI/header/header.tsx';
-import React from 'react';
+import BkKeeping from './components/Bookkeeping/bk-keeping.tsx'
+import Diadoc from './components/diadoc/diadoc'
+import ElectrSign from './components/electro-sign/electro-sign'
+import Extern from './components/extern/extern'
 
-import './App.css';
+import Header from './components/header/header.tsx'
+import Footer from './components/footer/footer.tsx'
+
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
+    <div className='App'>
+      <div className='container'>
         <Header />
         <ElectrSign />
         <Extern />
       </div>
-
       <BkKeeping />
-
-      <div className="container">
+      <div className='container'>
         <Diadoc />
         <Footer />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
