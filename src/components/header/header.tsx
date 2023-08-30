@@ -16,11 +16,9 @@ const Header = () => {
 
   const rootClasses = ['menu-mobile']
 
-  if (menuMobile) {
-    rootClasses.push('active')
-  } else {
-    rootClasses.splice(0, rootClasses.indexOf('active'))
-  }
+  menuMobile
+    ? rootClasses.push('active')
+    : rootClasses.splice(0, rootClasses.indexOf('active'))
 
   return (
     <div>
@@ -29,14 +27,14 @@ const Header = () => {
           <div className='header__logo'>
             <MenuBurger onClick={() => setMenuMobile(true)} />
             <LogoKontur />
-            <h2>Официальный партнер в ДНР</h2>
+            <h2>Официальный партнер в ДНР и ЛНР</h2>
           </div>
           <nav className='header__nav'>
             <li>
               <a href='tel:+79495035151'>+7 949 503 51 51</a>
             </li>
             <li>
-              <a href='#map'>Где мы находимся</a>
+              <a href='#map'>Где мы находимся?</a>
             </li>
           </nav>
         </div>
@@ -47,7 +45,7 @@ const Header = () => {
           <h2>
             <a href='tel:+79495035151'>+7 949 503 51 51</a>
           </h2>
-          <h4>Где мы находимся</h4>
+          <h4>Где мы находимся?</h4>
           <BackArrow onClick={() => setMenuMobile(false)} />
 
           <RequestForm

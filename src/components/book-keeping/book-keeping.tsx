@@ -4,16 +4,16 @@ import './bk-keeping.scss'
 import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
-import bgBk from '../../assets/img/bkKeeping/bgBk.png'
+import bgBk from '../../assets/img/book-keeping/bgBk.png'
 import bkBig from '../../assets/img/icons/bkBig.png'
 
-const BkKeeping = () => {
+const BookKeeping = () => {
   const [modal, setModal] = useState(false)
 
   return (
     <div className='wrapper'>
-      <div className='bkKeeping' id='bkLink'>
-        <div className='bkKeeping__body'>
+      <div className='book-keeping' id='bkLink'>
+        <div className='book-keeping__body'>
           <img src={bgBk} alt='#' />
           <div className='text'>
             <div className='text__title'>
@@ -37,11 +37,11 @@ const BkKeeping = () => {
           setVisible={setModal}
           title={'подключение Контур.Бухгалтерия'}
           titleMini={'Все для отчетности в Донецк'}
-          type={'bkKeeping'}
+          type={'BookKeeping'}
         ></RequestForm>
       </div>
     </div>
   )
 }
 
-export default BkKeeping
+export default BookKeeping

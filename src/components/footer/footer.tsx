@@ -11,7 +11,7 @@ const Footer = () => {
       <div className='footer'>
         <div className='footer__logo'>
           <LogoKontur />
-          <h2>Официальный партнер в ДНР</h2>
+          <h2>Официальный партнер в ДНР и ЛНР</h2>
         </div>
         <nav className='footer__nav'>
           <li>

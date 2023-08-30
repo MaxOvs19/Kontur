@@ -1,6 +1,6 @@
 import React from 'react'
 
-import BkKeeping from './components/Bookkeeping/bk-keeping.tsx'
+import BookKeeping from './components/book-keeping/book-keeping'
 import Diadoc from './components/diadoc/diadoc'
 import ElectronicSignature from './components/electronic-signature/electronic-signature'
 import Extern from './components/extern/extern'
@@ -18,7 +18,7 @@ function App() {
         <ElectronicSignature />
         <Extern />
       </div>
-      <BkKeeping />
+      <BookKeeping />
       <div className='container'>
         <Diadoc />
         <Footer />

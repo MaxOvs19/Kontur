@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 @import '../../styles/fonts';
 
-.bkKeeping {
+.book-keeping {
   height: 1100px;
   position: relative;
   max-width: 100%;
@@ -16,7 +16,7 @@
 
     h1 {
       font-size: 32px;
-      font-weight: $bolt;
+      font-weight: $bold;
       line-height: 66px;
     }
 
@@ -51,7 +51,7 @@
           margin-left: 36px;
           font-size: 40px;
           line-height: 32px;
-          font-weight: $bolt;
+          font-weight: $bold;
         }
       }
 
@@ -59,7 +59,7 @@
         background-color: $purple;
         margin-top: 42px;
         color: white;
-        font-weight: $bolt;
+        font-weight: $bold;
       }
 
       p {
@@ -72,7 +72,7 @@
   }
 }
 
-.bkKeeping::after {
+.book-keeping::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -85,7 +85,7 @@
 
 /*320px - 576px*/
 @media (max-width: 768px) {
-  .bkKeeping {
+  .book-keeping {
     &__body {
       flex-direction: column-reverse;
       .text {
@@ -103,7 +103,7 @@
 
 /*320px - 576px*/
 @media (max-width: 576px) {
-  .bkKeeping {
+  .book-keeping {
     height: 595px;
 
     &__body {
@@ -139,7 +139,7 @@
     }
   }
 
-  .bkKeeping::after {
+  .book-keeping::after {
     clip-path: polygon(360% -23%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
