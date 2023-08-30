@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 @import '../../styles/fonts';
 
-.ecosistem {
+.ecosystem {
   color: $black;
   display: flex;
   margin-top: 145px;
@@ -105,7 +105,7 @@
 
 /*576px - 768px*/
 @media (max-width: 768px) {
-  .ecosistem {
+  .ecosystem {
     margin-top: 105px;
 
     &__box {
@@ -140,7 +140,7 @@
     width: 90%;
   }
 
-  .ecosistem {
+  .ecosystem {
     margin-top: 105px;
 
     &__title {

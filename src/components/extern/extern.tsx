@@ -13,7 +13,7 @@ const Extern = () => {
   return (
     <div className='extern' id='externLink'>
       <div className='extern__title'>
-        <h1>Все для отчетности в Донецке | Подключи сейчас</h1>
+        <h1>Все для отчетности в ДНР и ЛНР | Подключи сейчас</h1>
         <p>
           Отчитывайтесь в контролирующие органы вовремя, запрашивайте акты
           сверки, получайте требования и уведомления. Формы отчетов в наших
@@ -44,7 +44,7 @@ const Extern = () => {
         visible={modal}
         setVisible={setModal}
         title={'подключение Контур.Экстерн'}
-        titleMini={'Все для отчетности в Донецк'}
+        titleMini={'Все для отчетности в ДНР и ЛНР'}
         type={'Extern'}
       ></RequestForm>
     </div>

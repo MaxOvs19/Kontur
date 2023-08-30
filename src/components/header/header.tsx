@@ -45,14 +45,12 @@ const Header = () => {
           <h2>
             <a href='tel:+79495035151'>+7 949 503 51 51</a>
           </h2>
-          <h4>Где мы находимся?</h4>
           <BackArrow onClick={() => setMenuMobile(false)} />
-
           <RequestForm
             visible={modal}
             setVisible={setModal}
             title={'электронную подпись'}
-            titleMini={'Получить ЭЦП в Донецке'}
+            titleMini={'Получить ЭЦП в ДНР и ЛНР'}
             type={'ElectronicSignature'}
           ></RequestForm>
           <Button onClick={() => setModal(true)}>Отправить заявку</Button>

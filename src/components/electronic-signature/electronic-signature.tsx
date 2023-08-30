@@ -12,9 +12,9 @@ const ElectronicSignature = () => {
   const [modal, setModal] = useState(false)
 
   return (
-    <div id='epcLink'>
+    <div>
       <div className='electronic-signature__title'>
-        <h1>Электронная подпись в Донецке | Получить ЭЦП</h1>
+        <h1>Электронная подпись в ДНР и ЛНР | Получить ЭЦП</h1>
         <p>
           Удостоверяющий центр выдает сертификаты электронной подписи для
           организаций и частных лиц.
@@ -29,17 +29,12 @@ const ElectronicSignature = () => {
           width='670px'
           height='431'
         ></iframe>
-        <div className='electrSign__map_adress'>
+        <div className='electronic-signature__map_address'>
           <h2>Официальный партнер в ДНР и ЛНР</h2>
-          <p className='name'>
-            ИП Бондаренко <br /> Станислав Геннадиевич
-          </p>
+          <p className='name'>ИП Бондаренко Станислав Геннадиевич</p>
 
           <h4>Адрес:</h4>
-          <p>
-            Донецкая республика, г.Донецк, ул. Мира Проспект, 17, 9 этаж, 95
-            офис
-          </p>
+          <p>ДНР, г.Донецк, ул. Мира Проспект, 17, 9 этаж, 95 офис</p>
 
           <h4>Контакты</h4>
           <ul>
@@ -53,7 +48,7 @@ const ElectronicSignature = () => {
         </div>
       </div>
 
-      <div className='electrSign__text'>
+      <div className='electronic-signature__text'>
         <div className='description'>
           <div className='description__text'>
             <p>
@@ -93,7 +88,7 @@ const ElectronicSignature = () => {
         </div>
       </div>
 
-      <div className='electrSign__request'>
+      <div className='electronic-signature__request'>
         <Button onClick={() => setModal(true)}>Отправить заявку</Button>
         <p>Оставьте заявку, и мы подберем подпись под ваши задачи</p>
       </div>
@@ -102,7 +97,7 @@ const ElectronicSignature = () => {
         visible={modal}
         setVisible={setModal}
         title={'электронную подпись'}
-        titleMini={'Получить ЭЦП в Донецке'}
+        titleMini={'Получить ЭЦП в ДНР и ЛНР'}
         type={'ElectronicSignature'}
       ></RequestForm>
     </div>

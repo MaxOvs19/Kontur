@@ -30,7 +30,7 @@
       border: 1px $gray solid;
     }
 
-    &_adress {
+    &_address {
       border: 1px solid #ecf8fd;
       width: 314px;
       padding: 0 5px 0 29px;
@@ -50,6 +50,10 @@
       li {
         margin-left: 26px;
         list-style: disc;
+      }
+
+      a {
+        color: $black;
       }
     }
   }
@@ -275,7 +279,7 @@
     &__map {
       flex-direction: column;
 
-      &_adress {
+      &_address {
         padding: 0;
         width: 100%;
       }

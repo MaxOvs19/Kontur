@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import PhoneInput from 'react-phone-number-input'
-import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input/input'
 
 import { PostService } from '../../../services/post/post.service'
 import './request-form.scss'
@@ -28,7 +27,7 @@ const RequestForm = ({
 
   const [email, setEmail] = useState('')
   const [fio, setFio] = useState('')
-  const [number, setNumber] = useState('+7')
+  const [number, setNumber] = useState('')
 
   const [emailDirty, setEmailDirty] = useState(false)
   const [fioDirty, setFioDirty] = useState(false)
@@ -50,7 +49,7 @@ const RequestForm = ({
     case 'Extern':
       colorBtn.push('orange')
       break
-    case 'bkKeeping':
+    case 'BookKeeping':
       colorBtn.push('purple')
       break
     case 'Diadoc':
@@ -128,24 +127,14 @@ const RequestForm = ({
     }
   }
 
-  const numberBlur = () => {
-    setNumberDirty(true)
-  }
-
   return (
     <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
-      <div
-        className='modal__content'
-        onClick={(e) => {
-          e.stopPropagation()
-        }}
-      >
+      <div className='modal__content' onClick={(e) => e.stopPropagation()}>
         <div className='title'>
           <LogoKontur />
-          <h2>Официальный партнер в ДНР</h2>
+          <h2>Официальный партнер в ДНР и ЛНР</h2>
           <Close onClick={() => setVisible(false)} />
         </div>
-
         {!sendForm ? (
           <div className='body'>
             <div className='body__title'>
@@ -186,13 +175,13 @@ const RequestForm = ({
 
                 <div className='inputBox'>
                   <PhoneInput
-                    type='tel'
+                    countries={['RU']}
                     name='number'
+                    placeholder='+7 949 000 00 00'
+                    smartCaret
                     maxLength={16}
-                    minLength={16}
-                    placeholder='+7 949 000 0000'
                     value={number}
-                    onBlur={numberBlur}
+                    onBlur={() => setNumberDirty(true)}
                     onChange={(e) => numberHandler(e)}
                   ></PhoneInput>
                   {numberDirty && numberError && (

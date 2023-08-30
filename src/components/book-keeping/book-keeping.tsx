@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import './bk-keeping.scss'
+import './book-keeping.scss'
 
 import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
-import bgBk from '../../assets/img/book-keeping/bgBk.png'
+import bgBk from '../../assets/img/book-keeping/bookkeeping.png'
 import bkBig from '../../assets/img/icons/bkBig.png'
 
 const BookKeeping = () => {
@@ -36,7 +36,7 @@ const BookKeeping = () => {
           visible={modal}
           setVisible={setModal}
           title={'подключение Контур.Бухгалтерия'}
-          titleMini={'Все для отчетности в Донецк'}
+          titleMini={'Все для отчетности в ДНР и ЛНР'}
           type={'BookKeeping'}
         ></RequestForm>
       </div>

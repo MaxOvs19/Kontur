@@ -18,7 +18,7 @@ const Diadoc = () => {
   return (
     <div className='diadoc' id='diadocLink'>
       <div className='diadoc__title'>
-        <h1>Электронный документооборот | Теперь и в ДНР</h1>
+        <h1>Электронный документооборот | Теперь и в ДНР и ЛНР</h1>
         <p>
           Документооборот с контрагентами. Получение и отправка юридически
           значимых документов без дублирования на бумаге. Входящие документы —
@@ -58,7 +58,7 @@ const Diadoc = () => {
             visible={modalDiadoc}
             setVisible={setModalDiadoc}
             title={'подключение Контур.Диадок'}
-            titleMini={'Электронный документооборот в ДНР'}
+            titleMini={'Электронный документооборот в ДНР и ЛНР'}
             type={'Diadoc'}
           ></RequestForm>
 
@@ -102,7 +102,7 @@ const Diadoc = () => {
         visible={modal}
         setVisible={setModal}
         title={'подключение ЭДО для маркетплейсов'}
-        titleMini={'Электронный документооборот в ДНР'}
+        titleMini={'Электронный документооборот в ДНР и ЛНР'}
         type={'Diadoc'}
       ></RequestForm>
     </div>
