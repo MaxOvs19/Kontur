@@ -56,7 +56,7 @@ const Header = () => {
           <Button onClick={() => setModal(true)}>Отправить заявку</Button>
           <p>Пишите нам!</p>
           <div>
-            <a href='#telegram'>
+            <a href='https://t.me/edo_ldnr' target='_blank' rel='noreferrer'>
               <TelegramIcon />
             </a>
           </div>

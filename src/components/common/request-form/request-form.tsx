@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PhoneInput from 'react-phone-number-input/input'
 
 import { PostService } from '../../../services/post/post.service'
@@ -22,25 +22,14 @@ const RequestForm = ({
   const colorBtn = ['body__submit']
 
   const [sendForm, setSendForm] = useState(false)
-  const [validForm, setValidForm] = useState(false)
-  const [data, setData] = useState({ fio: '', email: '', number: '' })
 
   const [email, setEmail] = useState('')
   const [fio, setFio] = useState('')
   const [number, setNumber] = useState('')
 
-  const [emailDirty, setEmailDirty] = useState(false)
-  const [fioDirty, setFioDirty] = useState(false)
-  const [numberDirty, setNumberDirty] = useState(false)
-
-  const [emailError, setEmailError] = useState('Неверно введен E-mail!')
-  const [fioError, setFioError] = useState('Неверно введены ФИО!')
-  const [numberError, setNumberError] = useState('Неверно введен номер!')
-
-  useEffect(() => {
-    if (emailError || fioError || numberError) setValidForm(false)
-    else setValidForm(true)
-  }, [emailError, fioError, numberError])
+  const [emailError, setEmailError] = useState('')
+  const [fioError, setFioError] = useState('')
+  const [numberError, setNumberError] = useState('')
 
   switch (type) {
     case 'ElectronicSignature':
@@ -63,43 +52,27 @@ const RequestForm = ({
     rootClasses.push('active')
   }
 
-  const Send = async (e: React.MouseEvent) => {
+  const submitForm = async (e: React.MouseEvent) => {
     e.preventDefault()
-
-    setData({
-      fio: data.fio,
-      email: data.email,
-      number: data.number
-    })
-
-    if (!data.email && !data.fio && !data.number) return
-    else setSendForm(true)
-
-    PostService.postData(data)
+    if (!emailError && !fioError && !numberError) {
+      setSendForm(true)
+      PostService.postData({ email, fio, number })
+    }
   }
 
   const fioHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFio(e.target.value)
-
     const re = /^[а-яА-Я ]+$/
-    if (!re.test(String(e.target.value))) {
+    if (!re.test(String(e.target.value)))
       setFioError('Фио введены некорректно!')
-    } else {
-      setFioError('')
-      setData({ ...data, fio: e.target.value })
-    }
+    else setFioError('')
   }
 
   const numberHandler = (number: any) => {
     setNumber(number)
     const re = /^[+]*[0-9]+$/
-
-    if (!re.test(String(number))) {
-      setNumberError('Номер введен некорректно!')
-    } else {
-      setNumberError('')
-      setData({ ...data, number: number })
-    }
+    if (!re.test(String(number))) setNumberError('Номер введен некорректно!')
+    else setNumberError('')
   }
 
   const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -107,24 +80,9 @@ const RequestForm = ({
     const re =
       /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\]\\.,;:\s@\\"]+\.)+[^<>()[\]\\.,;:\s@\\"]{2,})$/i
 
-    if (!re.test(String(e.target.value).toLowerCase())) {
+    if (!re.test(String(e.target.value).toLowerCase()))
       setEmailError('Email введен некорректно!')
-    } else {
-      setEmailError('')
-      setData({ ...data, email: e.target.value })
-    }
-  }
-
-  const blurHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const currentValue = e.target.name
-    switch (currentValue) {
-      case 'fio':
-        setFioDirty(true)
-        break
-      case 'email':
-        setEmailDirty(true)
-        break
-    }
+    else setEmailError('')
   }
 
   return (
@@ -150,12 +108,9 @@ const RequestForm = ({
                     name='fio'
                     required
                     value={fio}
-                    onBlur={(e) => blurHandler(e)}
                     onChange={(e) => fioHandler(e)}
                   />
-                  {fioDirty && fioError && (
-                    <div className='error'>{fioError}</div>
-                  )}
+                  {fioError && <div className='error'>{fioError}</div>}
                 </div>
 
                 <div className='inputBox'>
@@ -165,12 +120,9 @@ const RequestForm = ({
                     name='email'
                     required
                     value={email}
-                    onBlur={(e) => blurHandler(e)}
                     onChange={(e) => emailHandler(e)}
                   />
-                  {emailDirty && emailError && (
-                    <div className='error'>{emailError}</div>
-                  )}
+                  {emailError && <div className='error'>{emailError}</div>}
                 </div>
 
                 <div className='inputBox'>
@@ -178,21 +130,17 @@ const RequestForm = ({
                     countries={['RU']}
                     name='number'
                     placeholder='+7 949 000 00 00'
-                    smartCaret
                     maxLength={16}
                     value={number}
-                    onBlur={() => setNumberDirty(true)}
                     onChange={(e) => numberHandler(e)}
                   ></PhoneInput>
-                  {numberDirty && numberError && (
-                    <div className='error'>{numberError}</div>
-                  )}
+                  {numberError && <div className='error'>{numberError}</div>}
                 </div>
 
                 <Button
+                  disabled={!email || !fio || !number}
                   className={colorBtn.join(' ')}
-                  disabled={!validForm}
-                  onClick={Send}
+                  onClick={(e) => submitForm(e)}
                 >
                   Отправить заявку
                 </Button>

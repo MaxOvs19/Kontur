@@ -18,7 +18,7 @@ const Footer = () => {
             <a href='tel:+79495035151'>+7 949 503 51 51</a>
           </li>
           <li>
-            <a href='#telegram'>
+            <a href='https://t.me/edo_ldnr' target='_blank' rel='noreferrer'>
               <TelegramIcon />
             </a>
           </li>

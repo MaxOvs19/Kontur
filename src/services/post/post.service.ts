@@ -1,18 +1,18 @@
-export class PostService {
-  public static async postData(data: object) {
-    const response = await fetch('google.ru', {
-      method: 'POST',
-      body: JSON.stringify(data)
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log('Success')
-        } else {
-          console.log('Error HTTPS' + response.status)
-        }
-      })
-      .catch((err) => console.log(err))
+import emailjs from '@emailjs/browser'
 
-    return response
+export class PostService {
+  static serviceId: string = process.env.REACT_APP_SERVICE_ID as string
+  static templateId: string = process.env.REACT_APP_TEMPLATE_ID as string
+  static publicKey: string = process.env.REACT_APP_PUBLIC_KEY as string
+
+  public static async postData(data: any) {
+    emailjs.send(this.serviceId, this.templateId, data, this.publicKey).then(
+      (result) => {
+        console.log(result.text)
+      },
+      (error) => {
+        console.log(error.text)
+      }
+    )
   }
 }
