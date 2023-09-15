@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { openInNewTab } from '../../utils'
 
 import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
@@ -89,7 +90,9 @@ const ElectronicSignature = () => {
       </div>
 
       <div className='electronic-signature__request'>
-        <Button onClick={() => setModal(true)}>Отправить заявку</Button>
+        <Button onClick={() => openInNewTab('https://kontur.ru/ca?p=z07597')}>
+          Отправить заявку
+        </Button>
         <p>Оставьте заявку, и мы подберем подпись под ваши задачи</p>
       </div>
 

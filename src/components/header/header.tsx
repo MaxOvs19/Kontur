@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { openInNewTab } from '../../utils'
 
 import Ecosystem from '../ecosystem-business/ecosystem'
 import MenuBurger from '../common/menu-burger/menu-burger'
@@ -53,7 +54,11 @@ const Header = () => {
             titleMini={'Получить ЭЦП в ДНР и ЛНР'}
             type={'ElectronicSignature'}
           ></RequestForm>
-          <Button onClick={() => setModal(true)}>Отправить заявку</Button>
+          <Button
+            onClick={() => openInNewTab('https://kontur.ru/products?p=z07597')}
+          >
+            Отправить заявку
+          </Button>
           <p>Пишите нам!</p>
           <div>
             <a href='https://t.me/edo_ldnr' target='_blank' rel='noreferrer'>

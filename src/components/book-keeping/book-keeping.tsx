@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import './book-keeping.scss'
+import { openInNewTab } from '../../utils'
 
 import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
 import bgBk from '../../assets/img/book-keeping/bookkeeping.png'
 import bkBig from '../../assets/img/icons/bkBig.png'
+
+import './book-keeping.scss'
 
 const BookKeeping = () => {
   const [modal, setModal] = useState(false)
@@ -26,7 +28,10 @@ const BookKeeping = () => {
               интернет.
             </p>
 
-            <Button className={'text__btn'} onClick={() => setModal(true)}>
+            <Button
+              className={'text__btn'}
+              onClick={() => openInNewTab('https://kontur.ru/bk?p=z07597')}
+            >
               Отправить заявку
             </Button>
           </div>

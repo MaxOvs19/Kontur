@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import './diadoc.scss'
+import { openInNewTab } from '../../utils'
 
 import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
+
+import './diadoc.scss'
 
 import diadocBg from '../../assets/img/diadoc/diadocBg.png'
 import medalBlack from '../../assets/img/diadoc/medalBlack.png'
@@ -62,7 +64,10 @@ const Diadoc = () => {
             type={'Diadoc'}
           ></RequestForm>
 
-          <Button className={'requestBtn'} onClick={() => setModalDiadoc(true)}>
+          <Button
+            className={'requestBtn'}
+            onClick={() => openInNewTab('https://kontur.ru/diadoc?p=z07597')}
+          >
             Отправить заявку
           </Button>
         </div>
@@ -80,7 +85,10 @@ const Diadoc = () => {
         </div>
 
         <div className='box__text'>
-          <Button className={'requestBtn'} onClick={() => setModal(true)}>
+          <Button
+            className={'requestBtn'}
+            onClick={() => openInNewTab('https://kontur.ru/market?p=z07597')}
+          >
             Отправить заявку
           </Button>
           <ul>

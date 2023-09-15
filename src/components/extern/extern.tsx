@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import './extern.scss'
+import { openInNewTab } from '../../utils'
 
 import Button from '../common/button/button'
 import RequestForm from '../common/request-form/request-form'
 
 import externBig from '../../assets/img/icons/externBig.png'
 import bg_extern from '../../assets/img/extern/bg-extern.png'
+
+import './extern.scss'
 
 const Extern = () => {
   const [modal, setModal] = useState(false)
@@ -33,7 +35,10 @@ const Extern = () => {
             бухгалтерским фирмам, бухгалтерам-фрилансерам и самозанятым.
           </p>
 
-          <Button className={'text__btn'} onClick={() => setModal(true)}>
+          <Button
+            className={'text__btn'}
+            onClick={() => openInNewTab('https://kontur.ru/extern?p=z07597')}
+          >
             Отправить заявку
           </Button>
         </div>
