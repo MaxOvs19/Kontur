@@ -31,7 +31,7 @@ const Header = () => {
           </div>
           <nav className='header__nav'>
             <li>
-              <a href='tel:+79495035151'>+7 949 503 51 51</a>
+              <a href='tel:+79495015353'>+7 949 501 53 53</a>
             </li>
             <li>
               <a href='#map'>Где мы находимся?</a>
@@ -43,7 +43,7 @@ const Header = () => {
       <div className={rootClasses.join(' ')}>
         <div className='menu-mobile__content'>
           <h2>
-            <a href='tel:+79495035151'>+7 949 503 51 51</a>
+            <a href='tel:+79495015353'>+7 949 501 53 53</a>
           </h2>
           <BackArrow onClick={() => setMenuMobile(false)} />
           <RequestForm

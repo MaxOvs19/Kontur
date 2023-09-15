@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <nav className='footer__nav'>
           <li>
-            <a href='tel:+79495035151'>+7 949 503 51 51</a>
+            <a href='tel:+79495015353'>+7 949 501 53 53</a>
           </li>
           <li>
             <a href='https://t.me/edo_ldnr' target='_blank' rel='noreferrer'>
